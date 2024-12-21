@@ -23,9 +23,10 @@
 
 ## 👀 前言
 使用和分发本软件（Ink Canvas Basic）前，请您应当且务必知晓相关开源协议，本软件基于 https://github.com/WXRIW/Ink-Canvas 修改而成。对于墨迹功能的相关 issue 提出，可以优先查阅 https://github.com/WXRIW/Ink-Canvas/issues 。
+本项目（Ink Canvas Basic）从 InkCanvas/Ink-Canvas-Artistry Forked
 
 [直接下载](https://github.com/pigeons2023/Ink-Canvas-Basic/releases/latest "Latest Releases")
-——该安装包使用 Inno Setup Compiler 打包，默认的推荐设置适配希沃六代机的使用。
+——该安装包使用 Inno Setup Compiler 打包，默认的推荐设置适配上海易教智慧黑板的使用。
 
 ## 🔧 特性
 Support Active Pen (支持压感)
@@ -60,6 +61,7 @@ Support Active Pen (支持压感)
 
     错误报告：https://github.com/pigeons2023/Ink-Canvas-Basic/labels/bug/new
 
-2. Tencent QQ
+<!-- 2. Tencent QQ
 
     [![交流群](https://img.shields.io/badge/-%E4%BA%A4%E6%B5%81%E7%BE%A4%20617707731-blue?style=flat&logo=TencentQQ)](https://qm.qq.com/q/AC777tzmEw)
+    -->
