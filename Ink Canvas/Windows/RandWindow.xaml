@@ -7,7 +7,7 @@
     xmlns:local="clr-namespace:Ink_Canvas"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
-    Title="抽奖 - Ink Canvas Artistry"
+    Title="抽奖 - Ink Canvas Basic"
     Width="900"
     Height="500"
     ui:ThemeManager.RequestedTheme="Light"
@@ -157,6 +157,7 @@
                         </ikw:SimpleStackPanel>
                     </Border>
                 </Grid>
+                <Label Content="为保证随机，最大抽取人数为总人数的一半" HorizontalAlignment="Center" VerticalAlignment="Top" Height="38" Width="270" FontWeight="Bold" RenderTransformOrigin="0.638,0.862"/>
             </ikw:SimpleStackPanel>
             <Border x:Name="BorderBtnHelp" Grid.Column="1"
                 Height="40"

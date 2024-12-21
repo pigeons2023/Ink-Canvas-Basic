@@ -7,7 +7,7 @@
     xmlns:local="clr-namespace:Ink_Canvas"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
-    Title="Ink Canvas Artistry 使用指南"
+    Title="Ink Canvas Basic 使用指南"
     Width="700"
     Height="600"
     MinWidth="500"

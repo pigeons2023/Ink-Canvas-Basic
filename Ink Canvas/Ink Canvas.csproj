@@ -4,12 +4,12 @@
 		<RuntimeIdentifiers>win;win-x86;win-x64;win-arm64;win7;win7-x86;win7-x64</RuntimeIdentifiers>
 		<OutputType>WinExe</OutputType>
 		<GenerateAssemblyInfo>False</GenerateAssemblyInfo>
-		<AssemblyName>Ink Canvas Artistry</AssemblyName>
+		<AssemblyName>Ink Canvas Basic</AssemblyName>
 		<UseWindowsForms>true</UseWindowsForms>
 		<UseWPF>true</UseWPF>
 		<ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-		<ApplicationIcon>Resources\Ink Canvas Artistry.ico</ApplicationIcon>
+		<ApplicationIcon>Resources\Ink Canvas Basic.ico</ApplicationIcon>
 	</PropertyGroup>
 	<PropertyGroup>
 		<IsWebBootstrapper>false</IsWebBootstrapper>
@@ -57,6 +57,21 @@
 	  <Prefer32Bit>True</Prefer32Bit>
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="Resources\DeveloperAvatars\guoguo.png" />
+	  <None Remove="Resources\DeveloperAvatars\wuqi.png" />
+	  <None Remove="Resources\Icons-png\check-box-background.png" />
+	  <None Remove="Resources\Icons-png\icc-transparent-dark-small.png" />
+	  <None Remove="Resources\Icons-png\icc.png" />
+	  <None Remove="Resources\Icons-png\kuanciya.png" />
+	  <None Remove="Resources\Icons-png\kuandogeyuanliangwo.png" />
+	  <None Remove="Resources\Icons-png\kuandoujiyanhuaji.png" />
+	  <None Remove="Resources\Icons-png\kuanneikuhuaji.png" />
+	  <None Remove="Resources\Icons-png\kuanshounvhuaji.png" />
+	  <None Remove="Resources\Icons-png\tiebahuaji.png" />
+	  <None Remove="Resources\Icons-png\uac_icon.png" />
+	  <None Remove="Resources\qrcodes.png" />
+	</ItemGroup>
+	<ItemGroup>
 		<Reference Include="IACore">
 			<HintPath>.\IACore.dll</HintPath>
 		</Reference>
@@ -93,6 +108,7 @@
 		<PackageReference Include="Newtonsoft.Json">
 			<Version>13.0.3</Version>
 		</PackageReference>
+		<PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
 		<PackageReference Include="OSVersionExt" Version="3.0.0" />
 		<PackageReference Include="System.IO.Compression" Version="4.3.0" />
 		<PackageReference Include="System.Net.Http" Version="4.3.4" />
@@ -133,15 +149,27 @@
 		<Resource Include="Resources\DeveloperAvatars\ChangSakura.png" />
 		<Resource Include="Resources\DeveloperAvatars\clover-yan.png" />
 		<Resource Include="Resources\DeveloperAvatars\CN-Ironegg.jpg" />
+		<Resource Include="Resources\DeveloperAvatars\guoguo.png" />
 		<Resource Include="Resources\DeveloperAvatars\jiajiaxd.jpg" />
 		<Resource Include="Resources\DeveloperAvatars\kengwang.png" />
 		<Resource Include="Resources\DeveloperAvatars\Raspberry-Monster.jpg" />
 		<Resource Include="Resources\DeveloperAvatars\STBBRD.png" />
+		<Resource Include="Resources\DeveloperAvatars\wuqi.png" />
 		<Resource Include="Resources\DeveloperAvatars\WXRIW.png" />
-		
-		<Resource Include="Resources\Ink Canvas Artistry.ico" />
-		<Resource Include="Resources\Segoe Fluent Icons.ttf" />
 		<Resource Include="Resources\Icons-png\check-box-background.png" />
+		<Resource Include="Resources\Icons-png\icc-transparent-dark-small.png" />
+		<Resource Include="Resources\Icons-png\icc.png" />
+		<Resource Include="Resources\Icons-png\kuanciya.png" />
+		<Resource Include="Resources\Icons-png\kuandogeyuanliangwo.png" />
+		<Resource Include="Resources\Icons-png\kuandoujiyanhuaji.png" />
+		<Resource Include="Resources\Icons-png\kuanneikuhuaji.png" />
+		<Resource Include="Resources\Icons-png\kuanshounvhuaji.png" />
+		<Resource Include="Resources\Icons-png\tiebahuaji.png" />
+		<Resource Include="Resources\Icons-png\uac_icon.png" />
+		
+		<Resource Include="Resources\qrcodes.png" />
+		<Resource Include="Resources\Segoe Fluent Icons.ttf" />
+		<Resource Include="Resources\Icons-png\check-box-background_ICC.png" />
 		<Resource Include="Resources\Icons-png\checked-black.png" />
 		<Resource Include="Resources\Icons-png\checked-white.png" />
 		<Resource Include="Resources\Icons-png\Desmos.png" />

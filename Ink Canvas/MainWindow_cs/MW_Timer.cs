@@ -55,6 +55,14 @@ namespace Ink_Canvas
                         arg += " /IM EasiNote.exe";
                     }
                 }
+                if (Settings.Automation.IsAutoKillZHKT)
+                {
+                    Process[] processes = Process.GetProcessesByName("SmartClassPad_V4");
+                    if (processes.Length > 0)
+                    {
+                        arg += " /IM SmartClassPad_V4.exe" + " /IM YJCamera.exe" + " /IM E_Board.exe";
+                    }
+                }
                 if (arg != "/F")
                 {
                     Process p = new Process();
@@ -66,6 +74,11 @@ namespace Ink_Canvas
                     {
                         BtnSwitch_Click(null, null);
                         MessageBox.Show("“希沃白板 5”已自动关闭");
+                    }
+                    if (arg.Contains("智慧课堂"))
+                    {
+                        BtnSwitch_Click(null, null);
+                        MessageBox.Show("“智慧课堂系列软件”已自动关闭");
                     }
                 }
             }
@@ -88,12 +101,15 @@ namespace Ink_Canvas
                 if (Settings.Automation.IsAutoFoldInEasiNote && windowProcessName == "EasiNote" // 希沃白板
                     && (!(windowTitle.Length == 0 && ForegroundWindowInfo.WindowRect().Height < 500) || !Settings.Automation.IsAutoFoldInEasiNoteIgnoreDesktopAnno)
                     || Settings.Automation.IsAutoFoldInEasiCamera && windowProcessName == "EasiCamera" // 希沃视频展台
-                    || Settings.Automation.IsAutoFoldInEasiNote3C && windowProcessName == "EasiNote" // 希沃轻白板
+                    || Settings.Automation.IsAutoFoldInEasiNote3C && windowProcessName == "EasiNote" // 希沃轻白板3C
+                    || Settings.Automation.IsAutoFoldInEasiNote5C && windowProcessName == "EasiNote5C" // 希沃轻白板5C
                     || Settings.Automation.IsAutoFoldInSeewoPincoTeacher && (windowProcessName == "BoardService" || windowProcessName == "seewoPincoTeacher") // 希沃品课
                     || Settings.Automation.IsAutoFoldInHiteCamera && windowProcessName == "HiteCamera" // 鸿合视频展台
                     || Settings.Automation.IsAutoFoldInHiteTouchPro && windowProcessName == "HiteTouchPro" // 鸿合白板
                     || Settings.Automation.IsAutoFoldInWxBoardMain && windowProcessName == "WxBoardMain" // 文香白板
                     || Settings.Automation.IsAutoFoldInMSWhiteboard && (windowProcessName == "MicrosoftWhiteboard" || windowProcessName == "msedgewebview2") // 微软白板
+                    || Settings.Automation.IsAutoFoldInZHKTWhiteboard && windowProcessName == "E_Board" // 智慧课堂白板
+                    || Settings.Automation.IsAutoFoldInZHKTZhanTai && windowProcessName == "YJCamera" // 智慧课堂展台
                     || Settings.Automation.IsAutoFoldInOldZyBoard && // 中原旧白板
                     (WinTabWindowsChecker.IsWindowExisted("WhiteBoard - DrawingWindow")
                     || WinTabWindowsChecker.IsWindowExisted("InstantAnnotationWindow")))

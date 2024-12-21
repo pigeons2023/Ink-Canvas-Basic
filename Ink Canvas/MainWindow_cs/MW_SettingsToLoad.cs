@@ -1,19 +1,68 @@
 ﻿using Ink_Canvas.Helpers;
+using Microsoft.Win32;
 using Newtonsoft.Json;
 using OSVersionExtension;
 using System;
 using System.Reflection;
+using System.Security.Principal;
+using System.Threading;
 using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Media;
+using Ookii.Dialogs.Wpf;
 using File = System.IO.File;
 
 namespace Ink_Canvas
 {
     public partial class MainWindow : Window
     {
+        private void DisplayWelcomePopup()
+        {
+            if (TaskDialog.OSSupportsTaskDialogs)
+            {
+                var t = new Thread(() => {
+                    using (TaskDialog dialog = new TaskDialog())
+                    {
+                        dialog.WindowTitle = "感谢使用 Ink Canvas Basic!";
+                        dialog.MainInstruction = "感谢您使用 Ink Canvas Basic!";
+                        dialog.Content =
+                            "您需要知道的是该版本正处于开发阶段，可能会有无法预测的问题出现。出现任何问题以及未捕获的异常，请及时提供日志文件然后上报给开发者。";
+                        dialog.Footer =
+                            "加入 Ink Canvas Basic 交流群 <a href=\"https://github.com/pigeons2023/Ink-Canvas-Basic\">Github官方链接</a>。";
+                        dialog.FooterIcon = TaskDialogIcon.Information;
+                        dialog.EnableHyperlinks = true;
+                        TaskDialogButton okButton = new TaskDialogButton(ButtonType.Ok);
+                        dialog.Buttons.Add(okButton);
+                        TaskDialogButton button = dialog.Show();
+                    }
+                });
+                t.Start();
+            }
+        }
         private void LoadSettings(bool isStartup = false)
         {
+            try
+            {
+                if (File.Exists(App.RootPath + settingsFileName))
+                {
+                    try
+                    {
+                        string text = File.ReadAllText(App.RootPath + settingsFileName);
+                        Settings = JsonConvert.DeserializeObject<Settings>(text);
+                    }
+                    catch { }
+                }
+                else
+                {
+                    BtnResetToSuggestion_Click(null, null);
+                    DisplayWelcomePopup();
+                }
+            }
+            catch (Exception ex)
+            {
+                LogHelper.WriteLogToFile(ex.ToString(), LogHelper.LogType.Error);
+            }
+
             try
             {
                 if (File.Exists(App.RootPath + settingsFileName))
@@ -39,15 +88,50 @@ namespace Ink_Canvas
             {
                 CursorIcon_Click(null, null);
             }
+
+            try
+            {
+                var identity = WindowsIdentity.GetCurrent();
+                var principal = new WindowsPrincipal(identity);
+                if (principal.IsInRole(WindowsBuiltInRole.Administrator))
+                {
+                    AdministratorPrivilegeIndicateText.Text = "ICB目前以管理员身份运行";
+                    RunAsAdminButton.Visibility = Visibility.Collapsed;
+                    RunAsUserButton.Visibility = Visibility.Visible;
+                    RegistryKey localKey;
+                    if (Environment.Is64BitOperatingSystem)
+                        localKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
+                    else
+                        localKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry32);
+
+                    int LUAValue = (int)(localKey.OpenSubKey("SOFTWARE").OpenSubKey("Microsoft").OpenSubKey("Windows")
+                        .OpenSubKey("CurrentVersion").OpenSubKey("Policies").OpenSubKey("System")
+                        .GetValue("EnableLUA", 1));
+                    CannotSwitchToUserPrivNotification.IsOpen = LUAValue == 0;
+                }
+                else
+                {
+                    AdministratorPrivilegeIndicateText.Text = "ICB目前以非管理员身份运行";
+                    RunAsAdminButton.Visibility = Visibility.Visible;
+                    RunAsUserButton.Visibility = Visibility.Collapsed;
+                    CannotSwitchToUserPrivNotification.IsOpen = false;
+                }
+            }
+            catch (Exception e)
+            {
+                LogHelper.WriteLogToFile(e.ToString(), LogHelper.LogType.Error);
+            }
+
             try
             {
                 if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Startup) + "\\Ink Canvas Annotation.lnk"))
                 {
                     StartAutomaticallyDel("Ink Canvas Annotation");
-                    StartAutomaticallyCreate("Ink Canvas Artistry");
+                    StartAutomaticallyDel("Ink Canvas Artistry");
+                    StartAutomaticallyCreate("Ink Canvas Basic");
                     ToggleSwitchRunAtStartup.IsOn = true;
                 }
-                else if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Startup) + "\\Ink Canvas Artistry.lnk"))
+                else if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Startup) + "\\Ink Canvas Basic.lnk"))
                 {
                     ToggleSwitchRunAtStartup.IsOn = true;
                 }
@@ -562,6 +646,14 @@ namespace Ink_Canvas
                 {
                     ToggleSwitchAutoFoldInEasiNote3C.IsOn = false;
                 }
+                if (Settings.Automation.IsAutoFoldInEasiNote5C)
+                {
+                    ToggleSwitchAutoFoldInEasiNote5C.IsOn = true;
+                }
+                else
+                {
+                    ToggleSwitchAutoFoldInEasiNote5C.IsOn = false;
+                }
                 if (Settings.Automation.IsAutoFoldInSeewoPincoTeacher)
                 {
                     ToggleSwitchAutoFoldInSeewoPincoTeacher.IsOn = true;
@@ -609,6 +701,22 @@ namespace Ink_Canvas
                 else
                 {
                     ToggleSwitchAutoFoldInMSWhiteboard.IsOn = false;
+                }
+                if (Settings.Automation.IsAutoFoldInZHKTWhiteboard)
+                {
+                    ToggleSwitchAutoFoldInZHKTWhiteboard.IsOn = true;
+                }
+                else
+                {
+                    ToggleSwitchAutoFoldInZHKTWhiteboard.IsOn = false;
+                }
+                if (Settings.Automation.IsAutoFoldInZHKTZhanTai)
+                {
+                    ToggleSwitchAutoFoldInZHKTZhanTai.IsOn = true;
+                }
+                else
+                {
+                    ToggleSwitchAutoFoldInZHKTZhanTai.IsOn = false;
                 }
                 if (Settings.Automation.IsAutoFoldInPPTSlideShow)
                 {

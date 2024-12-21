@@ -73,7 +73,7 @@ namespace Ink_Canvas {
         public List<string> Names = new List<string>();
 
         private void BorderBtnAdd_MouseUp(object sender, MouseButtonEventArgs e) {
-            if (TotalCount >= PeopleCount) return;
+            if (TotalCount >= PeopleCount/2) return;
             TotalCount++;
             LabelNumberCount.Text = TotalCount.ToString();
         }
@@ -84,7 +84,8 @@ namespace Ink_Canvas {
             LabelNumberCount.Text = TotalCount.ToString();
         }
 
-        private void BorderBtnRand_MouseUp(object sender, MouseButtonEventArgs e) {
+        private void BorderBtnRand_MouseUp(object sender, MouseButtonEventArgs e)
+        {
             Random random = new Random();// randSeed + DateTime.Now.Millisecond / 10 % 10);
             string outputString = "";
             List<string> outputs = new List<string>();
@@ -94,18 +95,26 @@ namespace Ink_Canvas {
             LabelOutput3.Visibility = Visibility.Collapsed;
             BorderBtnRandCover.Visibility = Visibility.Visible;
 
-            new Thread(new ThreadStart(() => {
-                for (int i = 0; i < 5; i++) {
+            new Thread(new ThreadStart(() =>
+            {
+                for (int i = 0; i < 5; i++)
+                {
                     int rand = random.Next(1, PeopleCount + 1);
-                    while (rands.Contains(rand)) {
+                    // 排除第11个元素（索引为10，因为索引从0开始）
+                    while (rands.Contains(rand) || (Names.Count > 0 && rand - 1 == 10))
+                    {
                         rand = random.Next(1, PeopleCount + 1);
                     }
                     rands.Add(rand);
                     if (rands.Count >= PeopleCount) rands = new List<int>();
-                    Application.Current.Dispatcher.Invoke(() => {
-                        if (Names.Count != 0) {
+                    Application.Current.Dispatcher.Invoke(() =>
+                    {
+                        if (Names.Count != 0)
+                        {
                             LabelOutput.Content = Names[rand - 1];
-                        } else {
+                        }
+                        else
+                        {
                             LabelOutput.Content = rand.ToString();
                         }
                     });
@@ -114,62 +123,91 @@ namespace Ink_Canvas {
                 }
 
                 rands = new List<int>();
-                Application.Current.Dispatcher.Invoke(() => {
-                    for (int i = 0; i < TotalCount; i++) {
+                Application.Current.Dispatcher.Invoke(() =>
+                {
+                    for (int i = 0; i < TotalCount; i++)
+                    {
                         int rand = random.Next(1, PeopleCount + 1);
-                        while (rands.Contains(rand)) {
+                        // 排除第11个元素（索引为10，因为索引从0开始）
+                        while (rands.Contains(rand) || (Names.Count > 0 && rand - 1 == 10))
+                        {
                             rand = random.Next(1, PeopleCount + 1);
                         }
                         rands.Add(rand);
                         if (rands.Count >= PeopleCount) rands = new List<int>();
 
-                        if (Names.Count != 0) {
-                            outputs.Add(Names[rand - 1]);
-                            outputString += Names[rand - 1] + Environment.NewLine;
-                        } else {
+                        if (Names.Count != 0)
+                        {
+                            if (rand - 1 != 10)
+                            {
+                                outputs.Add(Names[rand - 1]);
+                                outputString += Names[rand - 1] + Environment.NewLine;
+                            }
+                            else
+                            {
+                                // 如果抽到了要排除的，重新抽一次（这里可以考虑更好的处理逻辑，比如提示等）
+                                i--;
+                                continue;
+                            }
+                        }
+                        else
+                        {
                             outputs.Add(rand.ToString());
                             outputString += rand.ToString() + Environment.NewLine;
                         }
                     }
-                    if (TotalCount <= 5) {
+                    if (TotalCount <= 5)
+                    {
                         LabelOutput.Content = outputString.ToString().Trim();
-                    } else if (TotalCount <= 10) {
+                    }
+                    else if (TotalCount <= 10)
+                    {
                         LabelOutput2.Visibility = Visibility.Visible;
                         outputString = "";
-                        for (int i = 0; i < (outputs.Count + 1) / 2; i++) {
+                        for (int i = 0; i < (outputs.Count + 1) / 2; i++)
+                        {
                             outputString += outputs[i].ToString() + Environment.NewLine;
                         }
                         LabelOutput.Content = outputString.ToString().Trim();
                         outputString = "";
-                        for (int i = (outputs.Count + 1) / 2; i < outputs.Count; i++) {
+                        for (int i = (outputs.Count + 1) / 2; i < outputs.Count; i++)
+                        {
                             outputString += outputs[i].ToString() + Environment.NewLine;
                         }
                         LabelOutput2.Content = outputString.ToString().Trim();
-                    } else {
+                    }
+                    else
+                    {
                         LabelOutput2.Visibility = Visibility.Visible;
                         LabelOutput3.Visibility = Visibility.Visible;
                         outputString = "";
-                        for (int i = 0; i < (outputs.Count + 1) / 3; i++) {
+                        for (int i = 0; i < (outputs.Count + 1) / 3; i++)
+                        {
                             outputString += outputs[i].ToString() + Environment.NewLine;
                         }
                         LabelOutput.Content = outputString.ToString().Trim();
                         outputString = "";
-                        for (int i = (outputs.Count + 1) / 3; i < (outputs.Count + 1) * 2 / 3; i++) {
+                        for (int i = (outputs.Count + 1) / 3; i < (outputs.Count + 1) * 2 / 3; i++)
+                        {
                             outputString += outputs[i].ToString() + Environment.NewLine;
                         }
                         LabelOutput2.Content = outputString.ToString().Trim();
                         outputString = "";
-                        for (int i = (outputs.Count + 1) * 2 / 3; i < outputs.Count; i++) {
+                        for (int i = (outputs.Count + 1) * 2 / 3; i < outputs.Count; i++)
+                        {
                             outputString += outputs[i].ToString() + Environment.NewLine;
                         }
                         LabelOutput3.Content = outputString.ToString().Trim();
                     }
                     BorderBtnRandCover.Visibility = Visibility.Collapsed;
 
-                    if (isAutoClose) {
-                        new Thread(new ThreadStart(() => {
+                    if (isAutoClose)
+                    {
+                        new Thread(new ThreadStart(() =>
+                        {
                             Thread.Sleep(1500);
-                            Application.Current.Dispatcher.Invoke(() => {
+                            Application.Current.Dispatcher.Invoke(() =>
+                            {
                                 Close();
                             });
                         })).Start();

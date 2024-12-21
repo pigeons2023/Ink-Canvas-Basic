@@ -38,12 +38,12 @@ namespace Ink_Canvas
             LogHelper.NewLog(string.Format("Ink Canvas Starting (Version: {0})", Assembly.GetExecutingAssembly().GetName().Version.ToString()));
 
             bool ret;
-            mutex = new System.Threading.Mutex(true, "Ink_Canvas_Artistry", out ret);
+            mutex = new System.Threading.Mutex(true, "Ink_Canvas_Basic", out ret);
 
             if (!ret && !e.Args.Contains("-m")) //-m multiple
             {
                 LogHelper.NewLog("Detected existing instance");
-                MessageBox.Show("已有一个程序实例正在运行");
+                MessageBox.Show("已有一个程序实例正在运行，先检查屏幕下方是否有悬浮条(有概率在最底层)，如果没有，请检查屏幕左右两侧是否有侧边栏，单击侧边栏即可恢复悬浮条！");
                 LogHelper.NewLog("Ink Canvas automatically closed");
                 Environment.Exit(0);
             }

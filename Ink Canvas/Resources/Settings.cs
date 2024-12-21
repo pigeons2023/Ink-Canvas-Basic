@@ -125,6 +125,8 @@ namespace Ink_Canvas
         public bool EnableViewboxFloatingBarScaleTransform { get; set; } = false;
         [JsonProperty("enableViewboxBlackBoardScaleTransform")]
         public bool EnableViewboxBlackBoardScaleTransform { get; set; } = false;
+        [JsonProperty("floatingBarImg")]
+        public int FloatingBarImg { get; set; } = 0;
         [JsonProperty("isTransparentButtonBackground")]
         public bool IsTransparentButtonBackground { get; set; } = true;
         [JsonProperty("isShowExitButton")]
@@ -184,13 +186,16 @@ namespace Ink_Canvas
             IsAutoFoldInEasiNote
             || IsAutoFoldInEasiCamera
             || IsAutoFoldInEasiNote3C
+            || IsAutoFoldInEasiNote5C
             || IsAutoFoldInSeewoPincoTeacher
             || IsAutoFoldInHiteTouchPro
             || IsAutoFoldInHiteCamera
             || IsAutoFoldInWxBoardMain
             || IsAutoFoldInOldZyBoard
             || IsAutoFoldInPPTSlideShow
-            || IsAutoFoldInMSWhiteboard;
+            || IsAutoFoldInMSWhiteboard
+            || IsAutoFoldInZHKTWhiteboard
+            || IsAutoFoldInZHKTZhanTai;
 
         [JsonProperty("isAutoFoldInEasiNote")]
         public bool IsAutoFoldInEasiNote { get; set; } = false;
@@ -203,6 +208,9 @@ namespace Ink_Canvas
 
         [JsonProperty("isAutoFoldInEasiNote3C")]
         public bool IsAutoFoldInEasiNote3C { get; set; } = false;
+
+        [JsonProperty("isAutoFoldInEasiNote5C")]
+        public bool IsAutoFoldInEasiNote5C { get; set; } = false;
 
         [JsonProperty("isAutoFoldInSeewoPincoTeacher")]
         public bool IsAutoFoldInSeewoPincoTeacher { get; set; } = false;
@@ -225,6 +233,12 @@ namespace Ink_Canvas
         [JsonProperty("isAutoFoldInMSWhiteboard")]
         public bool IsAutoFoldInMSWhiteboard { get; set; } = false;
 
+        [JsonProperty("isAutoFoldInZHKTWhiteboard")]
+        public bool IsAutoFoldInZHKTWhiteboard { get; set; } = true;
+
+        [JsonProperty("isAutoFoldInZHKTZhanTai")]
+        public bool IsAutoFoldInZHKTZhanTai { get; set; } = true;
+
         [JsonProperty("isAutoFoldInPPTSlideShow")]
         public bool IsAutoFoldInPPTSlideShow { get; set; } = false;
 
@@ -234,8 +248,17 @@ namespace Ink_Canvas
         [JsonProperty("isAutoKillEasiNote")]
         public bool IsAutoKillEasiNote { get; set; } = false;
 
+        [JsonProperty("isAutoKillZHKT")]
+        public bool IsAutoKillZHKT { get; set; } = false;
+
+        [JsonProperty("isAutoKillInkCanvas")]
+        public bool IsAutoKillInkCanvas { get; set; } = false;
+
+        [JsonProperty("isAutoKillICA")]
+        public bool IsAutoKillICA { get; set; } = false;
+
         [JsonProperty("isSaveScreenshotsInDateFolders")]
-        public bool IsSaveScreenshotsInDateFolders { get; set; } = false;
+        public bool IsSaveScreenshotsInDateFolders { get; set; } = true;
 
         [JsonProperty("isAutoSaveStrokesAtScreenshot")]
         public bool IsAutoSaveStrokesAtScreenshot { get; set; } = false;
@@ -268,7 +291,7 @@ namespace Ink_Canvas
         public bool IsQuadIR { get; set; } = false;
 
         [JsonProperty("touchMultiplier")]
-        public double TouchMultiplier { get; set; } = 0.25;
+        public double TouchMultiplier { get; set; } = 0.22;
 
         [JsonProperty("nibModeBoundsWidth")]
         public int NibModeBoundsWidth { get; set; } = 10;
@@ -283,10 +306,10 @@ namespace Ink_Canvas
         public double FingerModeBoundsWidthThresholdValue { get; set; } = 2.5;
 
         [JsonProperty("nibModeBoundsWidthEraserSize")]
-        public double NibModeBoundsWidthEraserSize { get; set; } = 0.8;
+        public double NibModeBoundsWidthEraserSize { get; set; } = 1.0;
 
         [JsonProperty("fingerModeBoundsWidthEraserSize")]
-        public double FingerModeBoundsWidthEraserSize { get; set; } = 0.8;
+        public double FingerModeBoundsWidthEraserSize { get; set; } = 1.0;
 
         [JsonProperty("isEnableEdgeGestureUtil")]
         public bool IsEnableEdgeGestureUtil { get; set; } = false;

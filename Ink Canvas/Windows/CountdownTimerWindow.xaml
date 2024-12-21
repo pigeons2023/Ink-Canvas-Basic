@@ -8,7 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:processbars="clr-namespace:Ink_Canvas.ProcessBars"
     xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
-    Title="计时器 - Ink Canvas Artistry"
+    Title="计时器 - Ink Canvas Basic"
     Width="1100"
     Height="700"
     MinWidth="300"

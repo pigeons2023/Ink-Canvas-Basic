@@ -3,6 +3,9 @@ using Newtonsoft.Json;
 using OSVersionExtension;
 using System;
 using System.Diagnostics;
+using System.IO;
+using System.Reflection;
+using System.Security.Principal;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +26,45 @@ namespace Ink_Canvas
             IsAutoUpdateWithSilenceBlock.Visibility = ToggleSwitchIsAutoUpdate.IsOn ? Visibility.Visible : Visibility.Collapsed;
             SaveSettingsToFile();
         }
+
+        private void RunAsUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            var identity = WindowsIdentity.GetCurrent();
+            var principal = new WindowsPrincipal(identity);
+            if (principal.IsInRole(WindowsBuiltInRole.Administrator))
+            {
+                Process.Start("explorer.exe", Assembly.GetEntryAssembly().Location);
+
+                CloseIsFromButton = true;
+                Application.Current.Shutdown();
+            }
+        }
+
+        private void RunAsAdminButton_Click(object sender, RoutedEventArgs e)
+        {
+            var identity = WindowsIdentity.GetCurrent();
+            var principal = new WindowsPrincipal(identity);
+            if (!principal.IsInRole(WindowsBuiltInRole.Administrator))
+            {
+                var file = new FileInfo(Assembly.GetExecutingAssembly().Location);
+                var exe = Path.Combine(file.DirectoryName, file.Name.Replace(file.Extension, "") + ".exe");
+
+                var proc = new Process
+                {
+                    StartInfo = {
+                        FileName = exe,
+                        Verb = "runas",
+                        UseShellExecute = true,
+                        Arguments = "-m"
+                    }
+                };
+                proc.Start();
+
+                CloseIsFromButton = true;
+                Application.Current.Shutdown();
+            }
+        }
+
         private void ToggleSwitchIsAutoUpdateWithSilence_Toggled(object sender, RoutedEventArgs e)
         {
             if (!isLoaded) return;
@@ -53,7 +95,7 @@ namespace Ink_Canvas
 
         private async void BtnCheckAutoUpdateProxyReturnedData_Click(object sender, RoutedEventArgs e)
         {
-            string ProxyReturnedData = await AutoUpdateHelper.GetRemoteVersion(Settings.Startup.AutoUpdateProxy + "https://raw.githubusercontent.com/InkCanvas/Ink-Canvas-Artistry/master/AutomaticUpdateVersionControl.txt");
+            string ProxyReturnedData = await AutoUpdateHelper.GetRemoteVersion(Settings.Startup.AutoUpdateProxy + "https://raw.githubusercontent.com/InkCanvas/Ink-Canvas-Basic/master/AutomaticUpdateVersionControl.txt");
             ShowNotificationAsync(ProxyReturnedData);
         }
 
@@ -78,13 +120,15 @@ namespace Ink_Canvas
             {
                 StartAutomaticallyDel("InkCanvas");
                 StartAutomaticallyDel("Ink Canvas Annotation");
-                StartAutomaticallyCreate("Ink Canvas Artistry");
+                StartAutomaticallyDel("Ink Canvas Artistry");
+                StartAutomaticallyCreate("Ink Canvas Basic");
             }
             else
             {
                 StartAutomaticallyDel("InkCanvas");
                 StartAutomaticallyDel("Ink Canvas Annotation");
                 StartAutomaticallyDel("Ink Canvas Artistry");
+                StartAutomaticallyCreate("Ink Canvas Basic");
             }
         }
 
@@ -326,6 +370,14 @@ namespace Ink_Canvas
             StartOrStoptimerCheckAutoFold();
         }
 
+        private void ToggleSwitchAutoFoldInEasiNote5C_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (!isLoaded) return;
+            Settings.Automation.IsAutoFoldInEasiNote5C = ToggleSwitchAutoFoldInEasiNote5C.IsOn;
+            SaveSettingsToFile();
+            StartOrStoptimerCheckAutoFold();
+        }
+
         private void ToggleSwitchAutoFoldInSeewoPincoTeacher_Toggled(object sender, RoutedEventArgs e)
         {
             if (!isLoaded) return;
@@ -374,6 +426,23 @@ namespace Ink_Canvas
             StartOrStoptimerCheckAutoFold();
         }
 
+        private void ToggleSwitchAutoFoldInZHKTWhiteboard_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (!isLoaded) return;
+            Settings.Automation.IsAutoFoldInZHKTWhiteboard = ToggleSwitchAutoFoldInZHKTWhiteboard.IsOn;
+            SaveSettingsToFile();
+            StartOrStoptimerCheckAutoFold();
+        }
+
+        private void ToggleSwitchAutoFoldInZHKTZhanTai_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (!isLoaded) return;
+            Settings.Automation.IsAutoFoldInZHKTZhanTai = ToggleSwitchAutoFoldInZHKTZhanTai.IsOn;
+            SaveSettingsToFile();
+            StartOrStoptimerCheckAutoFold();
+        }
+
+
         private void ToggleSwitchAutoFoldInPPTSlideShow_Toggled(object sender, RoutedEventArgs e)
         {
             if (!isLoaded) return;
@@ -388,7 +457,7 @@ namespace Ink_Canvas
             Settings.Automation.IsAutoKillPptService = ToggleSwitchAutoKillPptService.IsOn;
             SaveSettingsToFile();
 
-            if (Settings.Automation.IsAutoKillEasiNote || Settings.Automation.IsAutoKillPptService)
+            if (Settings.Automation.IsAutoKillEasiNote || Settings.Automation.IsAutoKillPptService || Settings.Automation.IsAutoKillZHKT)
             {
                 timerKillProcess.Start();
             }
@@ -403,7 +472,22 @@ namespace Ink_Canvas
             if (!isLoaded) return;
             Settings.Automation.IsAutoKillEasiNote = ToggleSwitchAutoKillEasiNote.IsOn;
             SaveSettingsToFile();
-            if (Settings.Automation.IsAutoKillEasiNote || Settings.Automation.IsAutoKillPptService)
+            if (Settings.Automation.IsAutoKillEasiNote || Settings.Automation.IsAutoKillPptService || Settings.Automation.IsAutoKillZHKT)
+            {
+                timerKillProcess.Start();
+            }
+            else
+            {
+                timerKillProcess.Stop();
+            }
+        }
+
+        private void ToggleSwitchAutoKillZHKT_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (!isLoaded) return;
+            Settings.Automation.IsAutoKillZHKT = ToggleSwitchAutoKillZHKT.IsOn;
+            SaveSettingsToFile();
+            if (Settings.Automation.IsAutoKillEasiNote || Settings.Automation.IsAutoKillPptService || Settings.Automation.IsAutoKillZHKT)
             {
                 timerKillProcess.Start();
             }
@@ -639,13 +723,13 @@ namespace Ink_Canvas
             Settings = new Settings();
             Settings.Advanced.IsSpecialScreen = true;
             Settings.Advanced.IsQuadIR = false;
-            Settings.Advanced.TouchMultiplier = 0.3;
+            Settings.Advanced.TouchMultiplier = 0.22;
             Settings.Advanced.NibModeBoundsWidth = 5;
-            Settings.Advanced.FingerModeBoundsWidth = 20;
+            Settings.Advanced.FingerModeBoundsWidth = 50;
             Settings.Advanced.NibModeBoundsWidthThresholdValue = 2.5;
             Settings.Advanced.FingerModeBoundsWidthThresholdValue = 2.5;
-            Settings.Advanced.NibModeBoundsWidthEraserSize = 0.8;
-            Settings.Advanced.FingerModeBoundsWidthEraserSize = 0.8;
+            Settings.Advanced.NibModeBoundsWidthEraserSize = 1.0;
+            Settings.Advanced.FingerModeBoundsWidthEraserSize = 1.0;
             Settings.Advanced.IsLogEnabled = true;
             Settings.Advanced.IsSecondConfimeWhenShutdownApp = false;
             Settings.Advanced.IsEnableEdgeGestureUtil = false;
@@ -653,7 +737,7 @@ namespace Ink_Canvas
             Settings.Appearance.IsEnableDisPlayFloatBarText = false;
             Settings.Appearance.IsEnableDisPlayNibModeToggler = false;
             Settings.Appearance.IsColorfulViewboxFloatingBar = false;
-            Settings.Appearance.EnableViewboxFloatingBarScaleTransform = true;
+            Settings.Appearance.EnableViewboxFloatingBarScaleTransform = false;
             Settings.Appearance.EnableViewboxBlackBoardScaleTransform = false;
             Settings.Appearance.IsTransparentButtonBackground = true;
             Settings.Appearance.IsShowExitButton = true;
@@ -667,16 +751,19 @@ namespace Ink_Canvas
             Settings.Automation.IsAutoFoldInEasiNoteIgnoreDesktopAnno = true;
             Settings.Automation.IsAutoFoldInEasiCamera = true;
             Settings.Automation.IsAutoFoldInEasiNote3C = false;
+            Settings.Automation.IsAutoFoldInEasiNote5C = false;
             Settings.Automation.IsAutoFoldInSeewoPincoTeacher = false;
             Settings.Automation.IsAutoFoldInHiteTouchPro = false;
             Settings.Automation.IsAutoFoldInHiteCamera = false;
             Settings.Automation.IsAutoFoldInWxBoardMain = false;
             Settings.Automation.IsAutoFoldInOldZyBoard = false;
             Settings.Automation.IsAutoFoldInMSWhiteboard = false;
+            Settings.Automation.IsAutoFoldInZHKTWhiteboard = true;
+            Settings.Automation.IsAutoFoldInZHKTZhanTai = true;
             Settings.Automation.IsAutoFoldInPPTSlideShow = false;
             Settings.Automation.IsAutoKillPptService = false;
-            Settings.Automation.IsAutoKillEasiNote = false;
-            Settings.Automation.IsSaveScreenshotsInDateFolders = false;
+            Settings.Automation.IsAutoKillEasiNote = true;
+            Settings.Automation.IsSaveScreenshotsInDateFolders = true;
             Settings.Automation.IsAutoSaveStrokesAtScreenshot = true;
             Settings.Automation.IsAutoSaveStrokesAtClear = true;
             Settings.Automation.IsAutoClearWhenExitingWritingMode = false;
@@ -717,7 +804,7 @@ namespace Ink_Canvas
             Settings.Gesture.IsEnableTwoFingerRotation = false;
             Settings.Gesture.IsEnableTwoFingerRotationOnSelection = true;
 
-            Settings.InkToShape.IsInkToShapeEnabled = true;
+            Settings.InkToShape.IsInkToShapeEnabled = false;
 
             Settings.Startup.IsEnableNibMode = false;
             Settings.Startup.IsAutoUpdate = true;
@@ -892,6 +979,18 @@ namespace Ink_Canvas
         }
 
         private void HyperlinkSourceToPresentRepository_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://github.com/pigeons2023/Ink-Canvas-Basic");
+            HideSubPanels();
+        }
+
+        private void HyperlinkSourceToInkCanvasForClassRepository_Click(object sender, RoutedEventArgs e)
+        {
+            Process.Start("https://github.com/InkCanvas/InkCanvasForClass");
+            HideSubPanels();
+        }
+
+        private void HyperlinkSourceToInkCanvasArtistryRepository_Click(object sender, RoutedEventArgs e)
         {
             Process.Start("https://github.com/InkCanvas/Ink-Canvas-Artistry");
             HideSubPanels();

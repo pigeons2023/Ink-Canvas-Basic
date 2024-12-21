@@ -9,7 +9,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.inkore.net/lib/ui/wpf/modern"
     Name="window"
-    Title="Ink Canvas Artistry 画板"
+    Title="Ink Canvas Basic 画板"
     Width="1440"
     Height="5500"
     AllowsTransparency="True"
@@ -788,6 +788,17 @@
                                     Foreground="{DynamicResource FloatBarForeground}"
                                     Text="触屏：单指移动，两指缩放/旋转" />
                             </Border>
+                            <Border
+                                Width="200"
+                                BorderBrush="{DynamicResource FloatBarBorderBrush}"
+                                BorderThickness="0.75"
+                                CornerRadius="2">
+                                <TextBlock
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Foreground="{DynamicResource FloatBarForeground}"
+                                    Text="暂不支持改变三角形形状" />
+                            </Border>
 
                         </ikw:SimpleStackPanel>
                     </ikw:SimpleStackPanel>
@@ -1348,7 +1359,7 @@
                             <Grid Width="0">
                                 <Border
                                     x:Name="BoardPenPalette"
-                                    Margin="-248,-218,-190,59"
+                                    Margin="-248,-218,-209,59"
                                     Background="{DynamicResource BoardBarBackground}"
                                     BorderBrush="{DynamicResource BoardBarBorderBrush}"
                                     BorderThickness="1"
@@ -1368,8 +1379,8 @@
                                                 Text="墨迹选项" />
                                         </Border>
                                         <ikw:SimpleStackPanel Orientation="Horizontal">
-                                            <Viewbox Width="280">
-                                                <ikw:SimpleStackPanel Margin="20,10,10,10">
+                                            <Viewbox Width="300">
+                                                <ikw:SimpleStackPanel Margin="20,10,30,10">
                                                     <Viewbox
                                                         Height="80"
                                                         HorizontalAlignment="Center"
@@ -2981,7 +2992,7 @@
         <Border
             Name="BorderSettings"
             Width="440"
-            Margin="0,150,0,350"
+            Margin="0,150,0,-534"
             HorizontalAlignment="Center"
             Background="{DynamicResource SettingsPageBackground}"
             BorderBrush="{DynamicResource SettingsPageBorderBrush}"
@@ -3285,6 +3296,32 @@
                                         Foreground="{DynamicResource SettingsPageForeground}"
                                         Text="开机运行后收纳到侧边栏" />
                                 </ikw:SimpleStackPanel>
+                                <ikw:SimpleStackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                    <TextBlock Foreground="{DynamicResource SettingsPageForeground}" Text="ICB目前以非管理员身份运行" VerticalAlignment="Center"
+                                                   FontSize="14" Margin="0,0,16,0" Name="AdministratorPrivilegeIndicateText" />
+                                    <Button Name="RunAsAdminButton" Click="RunAsAdminButton_Click">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Width="16" Height="16" Source="Resources/Icons-png/uac_icon.png" RenderOptions.BitmapScalingMode="HighQuality" />
+                                            <TextBlock VerticalAlignment="Center" Margin="4,0,0,0" FontSize="12" Text="以管理员身份重启" Foreground= "{DynamicResource SettingsPageAnnotationForeground}"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Height="30" Name="RunAsUserButton" Click="RunAsUserButton_Click">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Margin="4,0,0,0" FontSize="12" Text="以普通用户身份重启" Foreground= "{DynamicResource SettingsPageAnnotationForeground}"></TextBlock>
+                                        </StackPanel>
+                                    </Button>
+                                </ikw:SimpleStackPanel>
+                                <ui:InfoBar
+                                        IsOpen="True"
+                                        Name="CannotSwitchToUserPrivNotification"
+                                        IsClosable="False"
+                                        Severity="Warning"
+                                        Title="可能无法切换到普通用户权限"
+                                        Message="检测到您禁用了组策略项目：“用户帐户控制：以管理员批准模式运行所有管理员”，这可能会导致无法切换到普通用户权限" />
+                                <TextBlock
+                                    Foreground="{DynamicResource SettingsPageAnnotationForeground}"
+                                    Text="# 有概率触发无法切换且未检测出是否禁用了组策略项目的 BUG ！"
+                                    TextWrapping="Wrap" />
                             </ikw:SimpleStackPanel>
                         </GroupBox>
                         <GroupBox>
@@ -3381,6 +3418,12 @@
                                         <ComboBoxItem Content="每次询问" />
                                     </ComboBox>
                                 </ikw:SimpleStackPanel>
+                                <ui:InfoBar
+                                        IsOpen="True"
+                                        IsClosable="False"
+                                        Severity="Warning"
+                                        Title="Ink Canvas祖传Bug 之一"
+                                        Message="此处不建议将此选项调整为否，否则会出现撤回相关的 BUG" />
                                 <TextBlock
                                     Foreground="{DynamicResource SettingsPageAnnotationForeground}"
                                     Text="# 请注意，若不保留双曲线渐近线可能会有遇到撤回相关的 BUG 影响用。"
@@ -3542,7 +3585,7 @@
                                     <ikw:SimpleStackPanel Width="50">
                                         <ui:ToggleSwitch
                                             Name="ToggleSwitchEnableViewboxFloatingBarScaleTransform"
-                                            IsOn="True"
+                                            IsOn="False"
                                             OffContent="关"
                                             OnContent="开"
                                             Toggled="ToggleSwitchEnableViewboxFloatingBarScaleTransform_Toggled" />
@@ -3689,9 +3732,15 @@
                                         Foreground="{DynamicResource SettingsPageForeground}"
                                         Text="WPS 支持" />
                                 </ikw:SimpleStackPanel>
+                                <ui:InfoBar
+                                        IsOpen="True"
+                                        IsClosable="False"
+                                        Severity="Warning"
+                                        Title="不建议使用WPS"
+                                        Message="由于WPS像素级抄袭Office，并且抄的一坨狗屎，开启后会导致退出WPS时卡顿，请谨慎开启！" />
                                 <TextBlock
                                     Foreground="{DynamicResource SettingsPageAnnotationForeground}"
-                                    Text="# 不推荐使用 WPS Office，鉴于其对于触摸设备的较差支持及其自身的兼容性问题，对 WPS Office 支持时会导致 WPS Office 关闭时卡顿。"
+                                    Text="# # 可支持 WPS，但目前无法同时支持 MSOffice 和 WPS。若要启用WPS支持，请确保 WPS 是否在 “配置工具” 中开启了 “WPS Office 兼容第三方系统和软件” 选项，否则将无法识别到WPS！"
                                     TextWrapping="Wrap" />
                                 <Line
                                     Margin="0,4,0,4"
@@ -3719,6 +3768,13 @@
                                         Foreground="{DynamicResource SettingsPageForeground}"
                                         Text="进入 PPT 放映时自动进入批注模式" />
                                 </ikw:SimpleStackPanel>
+                                <ui:InfoBar
+                                        IsOpen="True"
+                                        x:Name="SettingsPPTInkingAndAutoFoldExplictBorder"
+                                        IsClosable="False"
+                                        Severity="Error"
+                                        Title="设置项冲突"
+                                        Message="该项与“自动化”中的“进入PPT 放映时自动收纳至侧边栏”选项冲突！请慎重考虑！" />
                                 <ikw:SimpleStackPanel Orientation="Horizontal">
                                     <ikw:SimpleStackPanel Width="50">
                                         <ui:ToggleSwitch
@@ -4287,7 +4343,24 @@
                                         VerticalAlignment="Center"
                                         FontSize="14"
                                         Foreground="{DynamicResource SettingsPageForeground}"
-                                        Text="进入“希沃轻白板”时自动收纳" />
+                                        Text="进入“希沃轻白板3C”时自动收纳" />
+                                </ikw:SimpleStackPanel>
+                                <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                    <ikw:SimpleStackPanel Width="50">
+                                        <ui:ToggleSwitch
+                                            Name="ToggleSwitchAutoFoldInEasiNote5C"
+                                            FontWeight="Bold"
+                                            IsOn="False"
+                                            OffContent="关"
+                                            OnContent="开"
+                                            Toggled="ToggleSwitchAutoFoldInEasiNote5C_Toggled" />
+                                    </ikw:SimpleStackPanel>
+                                    <TextBlock
+                                        Margin="0,0,14,0"
+                                        VerticalAlignment="Center"
+                                        FontSize="14"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="进入“希沃轻白板5C”时自动收纳" />
                                 </ikw:SimpleStackPanel>
                                 <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                                     <ikw:SimpleStackPanel Width="50">
@@ -4394,6 +4467,40 @@
                                 <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                                     <ikw:SimpleStackPanel Width="50">
                                         <ui:ToggleSwitch
+                                            Name="ToggleSwitchAutoFoldInZHKTWhiteboard"
+                                            FontWeight="Bold"
+                                            IsOn="False"
+                                            OffContent="关"
+                                            OnContent="开"
+                                            Toggled="ToggleSwitchAutoFoldInZHKTWhiteboard_Toggled" />
+                                    </ikw:SimpleStackPanel>
+                                    <TextBlock
+                                        Margin="0,0,14,0"
+                                        VerticalAlignment="Center"
+                                        FontSize="14"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="进入“智慧课堂白板”时自动收纳" />
+                                </ikw:SimpleStackPanel>
+                                <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                    <ikw:SimpleStackPanel Width="50">
+                                        <ui:ToggleSwitch
+                                            Name="ToggleSwitchAutoFoldInZHKTZhanTai"
+                                            FontWeight="Bold"
+                                            IsOn="False"
+                                            OffContent="关"
+                                            OnContent="开"
+                                            Toggled="ToggleSwitchAutoFoldInZHKTZhanTai_Toggled" />
+                                    </ikw:SimpleStackPanel>
+                                    <TextBlock
+                                        Margin="0,0,14,0"
+                                        VerticalAlignment="Center"
+                                        FontSize="14"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="进入“智慧课堂展台”时自动收纳" />
+                                </ikw:SimpleStackPanel>
+                                <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                    <ikw:SimpleStackPanel Width="50">
+                                        <ui:ToggleSwitch
                                             Name="ToggleSwitchAutoFoldInPPTSlideShow"
                                             FontWeight="Bold"
                                             IsOn="False"
@@ -4432,7 +4539,7 @@
                                         VerticalAlignment="Center"
                                         FontSize="14"
                                         Foreground="{DynamicResource SettingsPageForeground}"
-                                        Text="自动查杀希沃“PPT 小工具”" />
+                                        Text="自动查杀 希沃“PPT 小工具”" />
                                 </ikw:SimpleStackPanel>
                                 <TextBlock
                                     Foreground="{DynamicResource SettingsPageAnnotationForeground}"
@@ -4454,6 +4561,23 @@
                                         FontSize="14"
                                         Foreground="{DynamicResource SettingsPageForeground}"
                                         Text="自动查杀 希沃白板5" />
+                                </ikw:SimpleStackPanel>
+                                <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                    <ikw:SimpleStackPanel Width="50">
+                                        <ui:ToggleSwitch
+                                            Name="ToggleSwitchAutoKillZHKT"
+                                            FontWeight="Bold"
+                                            IsOn="False"
+                                            OffContent="关"
+                                            OnContent="开"
+                                            Toggled="ToggleSwitchAutoKillZHKT_Toggled" />
+                                    </ikw:SimpleStackPanel>
+                                    <TextBlock
+                                        Margin="0,0,14,0"
+                                        VerticalAlignment="Center"
+                                        FontSize="14"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="自动查杀 智慧课堂" />
                                 </ikw:SimpleStackPanel>
                                 <Line
                                     Margin="0,4,0,4"
@@ -4632,13 +4756,28 @@
                                 </ikw:SimpleStackPanel>
                             </ikw:SimpleStackPanel>
                         </GroupBox>
+                        <GroupBox Name="SettingsDonationGroupBox">
+                            <GroupBox.Header>
+                                <TextBlock
+                                    FontSize="26"
+                                    FontWeight="Bold"
+                                    Foreground="{DynamicResource SettingsPageForeground}"
+                                    Text="赞助" />
+                            </GroupBox.Header>
+                            <ikw:SimpleStackPanel>
+                                <TextBlock
+                                        Text="# Ink Canvas Basic 项目非常需要您的帮助，您的捐款是我们继续开发的动力，同时您也可以成为 Golden Sponsor。"
+                                        TextWrapping="Wrap" Foreground="{DynamicResource SettingsPageAnnotationForeground}" />
+                                <Image Margin="-12,5,-12,00" Width="200" Source="./Resources/qrcodes.png" />
+                            </ikw:SimpleStackPanel>
+                        </GroupBox>
                         <GroupBox>
                             <GroupBox.Header>
                                 <TextBlock
                                     FontSize="26"
                                     FontWeight="Bold"
                                     Foreground="{DynamicResource SettingsPageForeground}"
-                                    Text="关于 Ink Canvas Artistry" />
+                                    Text="关于 Ink Canvas Basic" />
                             </GroupBox.Header>
                             <ikw:SimpleStackPanel Spacing="5">
                                 <ikw:SimpleStackPanel Orientation="Horizontal">
@@ -4652,41 +4791,125 @@
                                         FontSize="18"
                                         FontWeight="Bold"
                                         Foreground="{DynamicResource SettingsPageForeground}"
-                                        Text="4.X.X.X" />
+                                        Text="5.X.X.X" />
                                 </ikw:SimpleStackPanel>
                                 <TextBlock
                                     Foreground="{DynamicResource SettingsPageAnnotationForeground}"
                                     Text="* 使用和分发本软件前，请您应当且务必知晓相关开源协议，且您应当知晓本软件基于 https://github.com/WXRIW/Ink-Canvas 修改而成。"
                                     TextWrapping="Wrap" />
-                                <Border
-                                    Padding="0,5"
-                                    BorderBrush="{DynamicResource PurpleBrush}"
-                                    BorderThickness="2"
-                                    CornerRadius="5">
-                                    <WrapPanel
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Center"
-                                        Orientation="Horizontal">
-                                        <ui:FontIcon
-                                            Margin="0,0,4,0"
-                                            FontFamily="{StaticResource FluentIconFontFamily}"
-                                            FontSize="16"
-                                            Foreground="{DynamicResource SettingsPageForeground}"
-                                            Glyph="&#xeb95;" />
+                                <Border BorderBrush="{DynamicResource SettingsPageAnnotationForeground}" BorderThickness="1" CornerRadius="8"
+                                            Background="{DynamicResource FloatBarBackground}">
+                                    <ikw:SimpleStackPanel Orientation="Vertical" Margin="8">
+                                        <ikw:SimpleStackPanel Orientation="Horizontal">
+                                            <Image Width="32" Height="32" VerticalAlignment="Top">
+                                                <Image.Source>
+                                                    <DrawingImage>
+                                                        <DrawingImage.Drawing>
+                                                            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                                                                <GeometryDrawing Brush="{DynamicResource SettingsPageForeground}"
+                                                                                     Geometry="F0 M24,24z M0,0z M12.875,3C12.875,2.51675 12.4832,2.125 12,2.125 11.5168,2.125 11.125,2.51675 11.125,3L11.125,4.25876 5.86249,5.13585C5.84299,5.13895 5.82367,5.1427 5.80454,5.14708 5.62042,5.1891 5.46195,5.28735 5.34446,5.4204 5.31167,5.45747 5.28185,5.49755 5.25544,5.54036 5.23979,5.56568 5.22542,5.59181 5.2124,5.61865L2.21738,11.6087C2.15663,11.7302 2.125,11.8642 2.125,12 2.125,13.0277 2.53326,14.0133 3.25996,14.74 3.98667,15.4667 4.97229,15.875 6,15.875 7.02771,15.875 8.01334,15.4667 8.74004,14.74 9.46674,14.0133 9.875,13.0277 9.875,12 9.875,11.8642 9.84337,11.7302 9.78262,11.6087L7.31244,6.66833 11.125,6.0329 11.125,19.125 7,19.125C6.51675,19.125 6.125,19.5168 6.125,20 6.125,20.4832 6.51675,20.875 7,20.875L17,20.875C17.4832,20.875 17.875,20.4832 17.875,20 17.875,19.5168 17.4832,19.125 17,19.125L12.875,19.125 12.875,6.0329 16.6876,6.66833 14.2174,11.6087C14.1566,11.7302 14.125,11.8642 14.125,12 14.125,13.0277 14.5333,14.0133 15.26,14.74 15.9867,15.4667 16.9723,15.875 18,15.875 19.0277,15.875 20.0133,15.4667 20.74,14.74 21.4667,14.0133 21.875,13.0277 21.875,12 21.875,11.8642 21.8434,11.7302 21.7826,11.6087L18.7876,5.61864C18.7746,5.5918 18.7602,5.56567 18.7446,5.54036 18.7182,5.49755 18.6883,5.45747 18.6555,5.4204 18.538,5.28735 18.3796,5.1891 18.1955,5.14708 18.1763,5.1427 18.157,5.13895 18.1375,5.13585L12.875,4.25876 12.875,3z M3.88347,12.1896C3.92772,12.6837 4.14382,13.149 4.4974,13.5026 4.89591,13.9011 5.43641,14.125 6,14.125 6.56359,14.125 7.10409,13.9011 7.5026,13.5026 7.85618,13.149 8.07228,12.6837 8.11653,12.1896L6,7.95656 3.88347,12.1896z M16.4974,13.5026C16.1438,13.149,15.9277,12.6837,15.8835,12.1896L18,7.95656 20.1165,12.1896C20.0723,12.6837 19.8562,13.149 19.5026,13.5026 19.1041,13.9011 18.5636,14.125 18,14.125 17.4364,14.125 16.8959,13.9011 16.4974,13.5026z" />
+                                                            </DrawingGroup>
+                                                        </DrawingImage.Drawing>
+                                                    </DrawingImage>
+                                                </Image.Source>
+                                            </Image>
+                                            <StackPanel Orientation="Vertical" Margin="4,0,0,0">
+                                                <TextBlock
+                                                        Text="本软件和ICR，ICC，ICA，Ink Canvas均基于许可证开源" Margin="0,0,0,-1"
+                                                        TextWrapping="Wrap" Foreground="{DynamicResource SettingsPageAnnotationForeground}" FontWeight="Bold" />
+                                                <TextBlock
+                                                        Text="GNU General Public License v3.0" FontSize="20"
+                                                        TextWrapping="Wrap" Foreground="{DynamicResource SettingsPageForeground}" />
+                                            </StackPanel>
+                                        </ikw:SimpleStackPanel>
                                         <TextBlock
-                                            FontSize="15"
-                                            FontWeight="Bold"
-                                            Foreground="{DynamicResource SettingsPageForeground}"
-                                            Text="开源协议:  " />
-                                        <TextBlock
-                                            FontSize="15"
-                                            Foreground="{DynamicResource SettingsPageForeground}"
-                                            Text="GNU General Public License v3.0" />
-                                    </WrapPanel>
+                                                Text="本强许可协议的许可条件是，在相同许可协议下，提供许可作品的完整源代码和修改，包括使用许可作品的大型作品。版权和许可声明必须保留。贡献者明确授予专利权。"
+                                                Margin="0,2,0,1" TextWrapping="Wrap" Foreground="{DynamicResource SettingsPageAnnotationForeground}" FontSize="11" />
+                                    </ikw:SimpleStackPanel>
                                 </Border>
                                 <TextBlock FontSize="15" Foreground="{DynamicResource SettingsPageForeground}">
-                                    <Bold>本项目仓库源:</Bold>
+                                    <Bold>ICB项目仓库源:</Bold>
                                     <Hyperlink Click="HyperlinkSourceToPresentRepository_Click" TextDecorations="None">
+                                        <TextBlock
+                                            Width="250"
+                                            Margin="2,0"
+                                            Text="https://github.com/pigeons2023/Ink-Canvas-Basic"
+                                            TextWrapping="Wrap" />
+                                    </Hyperlink>
+                                </TextBlock>
+                                <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
+                                    <TextBlock
+                                        FontSize="15"
+                                        FontWeight="Bold"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="ICB开发者: " />
+                                    <Image
+                                        Width="20"
+                                        Height="20"
+                                        RenderOptions.BitmapScalingMode="HighQuality"
+                                        Source="/Resources/DeveloperAvatars/guoguo.png" />
+                                    <TextBlock
+                                        FontSize="15"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="Wang RuiGuo  " />
+                                    <Image
+                                        Width="20"
+                                        Height="20"
+                                        RenderOptions.BitmapScalingMode="HighQuality"
+                                        Source="/Resources/DeveloperAvatars/wuqi.png" />
+                                    <TextBlock
+                                        FontSize="15"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="Wu Qi" />
+
+                                </WrapPanel>
+                                <Line
+                                    Margin="0,4,0,0"
+                                    HorizontalAlignment="Center"
+                                    Stroke="{DynamicResource SettingsPageBorderBrush}"
+                                    StrokeThickness="1"
+                                    X1="0"
+                                    X2="350"
+                                    Y1="0"
+                                    Y2="0" />
+                                <TextBlock FontSize="15" Foreground="{DynamicResource SettingsPageForeground}">
+                                    <Bold>ICC项目仓库源:</Bold>
+                                    <Hyperlink Click="HyperlinkSourceToInkCanvasForClassRepository_Click" TextDecorations="None">
+                                        <TextBlock
+                                            Width="250"
+                                            Margin="2,0"
+                                            Text="https://github.com/InkCanvas/InkCanvasForClass"
+                                            TextWrapping="Wrap" />
+                                    </Hyperlink>
+                                </TextBlock>
+                                <WrapPanel VerticalAlignment="Center" Orientation="Horizontal">
+                                    <TextBlock
+                                        FontSize="15"
+                                        FontWeight="Bold"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="ICC开发者: " />
+                                    <Image
+                                        Width="20"
+                                        Height="20"
+                                        RenderOptions.BitmapScalingMode="HighQuality"
+                                        Source="/Resources/DeveloperAvatars/dubi906w.jpg" />
+                                    <TextBlock
+                                        FontSize="15"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="Dubi906w" />
+                                </WrapPanel>
+                                <Line
+                                    Margin="0,4,0,0"
+                                    HorizontalAlignment="Center"
+                                    Stroke="{DynamicResource SettingsPageBorderBrush}"
+                                    StrokeThickness="1"
+                                    X1="0"
+                                    X2="350"
+                                    Y1="0"
+                                    Y2="0" />
+                                <TextBlock FontSize="15" Foreground="{DynamicResource SettingsPageForeground}">
+                                    <Bold>ICA项目仓库源:</Bold>
+                                    <Hyperlink Click="HyperlinkSourceToInkCanvasArtistryRepository_Click" TextDecorations="None">
                                         <TextBlock
                                             Width="250"
                                             Margin="2,0"
@@ -4699,7 +4922,7 @@
                                         FontSize="15"
                                         FontWeight="Bold"
                                         Foreground="{DynamicResource SettingsPageForeground}"
-                                        Text="本项目开发者: " />
+                                        Text="ICA开发者: " />
                                     <Image
                                         Width="20"
                                         Height="20"
@@ -4891,6 +5114,24 @@
                                             Foreground="{DynamicResource SettingsPageForeground}"
                                             Text="ChangSakura" />
                                     </ikw:SimpleStackPanel>
+                                    <ikw:SimpleStackPanel Spacing="3" Orientation="Vertical">
+                                        <Line
+                                            Margin="0,4,0,0"
+                                            HorizontalAlignment="Center"
+                                            Stroke="{DynamicResource SettingsPageBorderBrush}"
+                                            StrokeThickness="1"
+                                            X1="0"
+                                            X2="350"
+                                            Y1="0"
+                                            Y2="0" />
+                                        <TextBlock
+
+                                            Text="ICB的部分元素设计参考来源于：© iNKORE! 名下产品 Inkways，已经过授权使用，最终解释权归 Yoojun Zhou 所有"
+                                            TextWrapping="Wrap" Foreground="{DynamicResource SettingsPageAnnotationForeground}" />
+                                        <TextBlock
+                                            Text="We love Open-Source forever!" FontWeight="Bold"
+                                            TextWrapping="Wrap" Foreground="{DynamicResource SettingsPageAnnotationForeground}" />
+                                    </ikw:SimpleStackPanel>
                                 </WrapPanel>
                             </ikw:SimpleStackPanel>
                         </GroupBox>
@@ -4963,7 +5204,7 @@
                 BorderBrush="{DynamicResource FloatBarBorderBrush}"
                 BorderThickness="1"
                 CornerRadius="6"
-                Opacity="0.4">
+                Opacity="0.8"><!--适配18班电脑-->
                 <ikw:SimpleStackPanel Orientation="Horizontal">
                     <Border
                         Width="40"
@@ -5052,7 +5293,7 @@
                 BorderBrush="{DynamicResource FloatBarBorderBrush}"
                 BorderThickness="1"
                 CornerRadius="6"
-                Opacity="0.4">
+                Opacity="0.8"><!--适配18班电脑-->
                 <ikw:SimpleStackPanel Orientation="Horizontal">
                     <Border
                         Width="40"
@@ -5481,7 +5722,7 @@
                             <Grid Width="0">
                                 <Border
                                     x:Name="PenPalette"
-                                    Margin="-131,-190,-239,35"
+                                    Margin="-131,-190,-275,35"
                                     Background="{DynamicResource FloatBarBackground}"
                                     BorderBrush="{DynamicResource FloatBarBorderBrush}"
                                     BorderThickness="1"
@@ -5501,8 +5742,8 @@
                                                 Text="墨迹选项" />
                                         </Border>
                                         <ikw:SimpleStackPanel Orientation="Horizontal">
-                                            <Viewbox Width="245">
-                                                <ikw:SimpleStackPanel Margin="20,10">
+                                            <Viewbox Width="275">
+                                                <ikw:SimpleStackPanel Margin="20,10,40,0">
                                                     <Viewbox
                                                         Height="80"
                                                         HorizontalAlignment="Center"
@@ -6403,7 +6644,8 @@
                                         TextAlignment="Center"
                                         Visibility="{Binding ElementName=FloatBarSelectIconTextBlock, Path=Visibility}" />
                                 </ikw:SimpleStackPanel>
-                            </Button><Button
+                            </Button>
+                            <Button
                                 Width="30"
                                 Height="32"
                                 Padding="0"
@@ -6623,7 +6865,7 @@
                             <Grid Width="0">
                                 <Border
                                     Name="BorderTools"
-                                    Margin="-120,-180,-40,40"
+                                    Margin="-120,-234,-40,40"
                                     Background="{DynamicResource FloatBarBackground}"
                                     BorderBrush="{DynamicResource FloatBarBorderBrush}"
                                     BorderThickness="1"
@@ -6884,6 +7126,80 @@
                                                     </ikw:SimpleStackPanel>
                                                 </Button>
                                             </ikw:SimpleStackPanel>
+                                            <ikw:SimpleStackPanel Height="45" Orientation="Horizontal">
+                                                <Button
+                                                    Width="45"
+                                                    Height="45"
+                                                    Padding="0"
+                                                    BorderThickness="0"
+                                                    Click="FloatLaunchEasiCamera_Click">
+                                                    <ikw:SimpleStackPanel
+                                                        Width="40"
+                                                        Height="40"
+                                                        Orientation="Vertical">
+                                                        <ui:FontIcon
+                                                            Width="22"
+                                                            Height="22"
+                                                            Margin="0,4,0,1"
+                                                            FontFamily="{StaticResource FluentIconFontFamily}"
+                                                            Foreground="{DynamicResource FloatBarForeground}"
+                                                            Glyph="&#xe116;" />
+                                                        <Label
+                                                            HorizontalAlignment="Center"
+                                                            Content="视频展台"
+                                                            FontSize="10"
+                                                            Foreground="{DynamicResource FloatBarForeground}" />
+                                                    </ikw:SimpleStackPanel>
+                                                </Button>
+                                                <Button
+                                                    Width="45"
+                                                    Height="45"
+                                                    Padding="0"
+                                                    BorderThickness="0"
+                                                    Click="FloatLaunchDesmos_Click">
+                                                    <ikw:SimpleStackPanel
+                                                        Width="40"
+                                                        Height="40"
+                                                        Orientation="Vertical">
+                                                        <ui:FontIcon
+                                                            Width="22"
+                                                            Height="22"
+                                                            Margin="0,4,0,1"
+                                                            FontFamily="{StaticResource FluentIconFontFamily}"
+                                                            Foreground="{DynamicResource FloatBarForeground}"
+                                                            Glyph="&#59386;" />
+                                                        <Label
+                                                            HorizontalAlignment="Center"
+                                                            Content="Desmos"
+                                                            FontSize="10"
+                                                            Foreground="{DynamicResource FloatBarForeground}" />
+                                                    </ikw:SimpleStackPanel>
+                                                </Button>
+                                                <Button
+                                                    Width="45"
+                                                    Height="45"
+                                                    Padding="0"
+                                                    BorderThickness="0"
+                                                    >
+                                                    <ikw:SimpleStackPanel
+                                                        Width="40"
+                                                        Height="40"
+                                                        Orientation="Vertical">
+                                                        <ui:FontIcon
+                                                            Width="22"
+                                                            Height="22"
+                                                            Margin="0,4,0,1"
+                                                            FontFamily="{StaticResource FluentIconFontFamily}"
+                                                            Foreground="{DynamicResource FloatBarForeground}"
+                                                            Glyph="&#59154;" />
+                                                        <Label
+                                                            HorizontalAlignment="Center"
+                                                            Content="更新中..."
+                                                            FontSize="10"
+                                                            Foreground="{DynamicResource FloatBarForeground}" />
+                                                    </ikw:SimpleStackPanel>
+                                                </Button>
+                                            </ikw:SimpleStackPanel>
                                         </ikw:SimpleStackPanel>
                                     </ikw:SimpleStackPanel>
                                 </Border>
@@ -7115,8 +7431,8 @@
         <!--  // 侧边栏 //  -->
         <Viewbox
             x:Name="LeftSidePanel"
-            Width="30"
-            Height="50"
+            Width="40"
+            Height="100"
             Margin="-40,0,0,-150"
             HorizontalAlignment="Left"
             VerticalAlignment="Center"
@@ -7124,14 +7440,14 @@
             Visibility="Visible">
             <ikw:SimpleStackPanel>
                 <Border
-                    Width="30"
-                    Height="50"
+                    Width="40"
+                    Height="100"
                     Background="LightGray"
                     CornerRadius="5"
-                    Opacity="0.4">
+                    Opacity="0.8"><!--适配18班-->
                     <Image
-                        Width="30"
-                        Height="50"
+                        Width="40"
+                        Height="80"
                         Margin="0,0,-15,0"
                         RenderOptions.BitmapScalingMode="HighQuality"
                         Source="/Resources/Icons-png/penUpright.png" />
@@ -7140,8 +7456,8 @@
         </Viewbox>
         <Viewbox
             x:Name="RightSidePanel"
-            Width="30"
-            Height="50"
+            Width="40"
+            Height="100"
             Margin="0,0,-40,-150"
             HorizontalAlignment="Right"
             VerticalAlignment="Center"
@@ -7149,17 +7465,17 @@
             Visibility="{Binding ElementName=LeftSidePanel, Path=Visibility}">
             <ikw:SimpleStackPanel>
                 <Border
-                    Width="30"
-                    Height="50"
+                    Width="40"
+                    Height="100"
                     Background="LightGray"
                     CornerRadius="5"
-                    Opacity="0.4">
+                    Opacity="0.8"><!--适配18班-->
                     <Image
-                        Width="30"
-                        Height="50"
-                        Margin="-15,0,0,0"
+                        Width="40"
+                        Height="80"
+                        Margin="0,0,8,0"
                         RenderOptions.BitmapScalingMode="HighQuality"
-                        Source="/Resources/Icons-png/penUpright.png" />
+                        Source="/Resources/Icons-png/penUpright.png" HorizontalAlignment="Right" />
                 </Border>
             </ikw:SimpleStackPanel>
         </Viewbox>

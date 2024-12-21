@@ -1087,6 +1087,17 @@ namespace Ink_Canvas
             }
         }
 
+        private void FloatLaunchEasiCamera_Click(object sender, RoutedEventArgs e)
+        {
+            SoftwareLauncher.LaunchEasiCamera("希沃视频展台");
+        }
+
+        private void FloatLaunchDesmos_Click(object sender, RoutedEventArgs e)
+        {
+            HideSubPanelsImmediately();
+            Process.Start("https://www.desmos.com/calculator?lang=zh-CN");
+        }
+
         int BoundsWidth = 5;
 
         private void BtnHideInkCanvas_Click(object sender, RoutedEventArgs e)
