@@ -10,6 +10,7 @@
 
 # Ink Canvas Basic
 [![UPSTREAM](https://img.shields.io/badge/UpStream-WXRIW%2FInk--Canvas-red.svg "LICENSE")](https://github.com/WXRIW/Ink-Canvas)
+[![FORKED](https://img.shields.io/badge/Forked-ChangSakura%2FInk--Canvas--Artistry-blue.svg "Forked from Ink-Canvas-Artistry")](https://github.com/InkCanvas/Ink-Canvas-Artistry)
 [![LICENSE](https://img.shields.io/badge/License-GPL--3.0-red.svg "LICENSE")](./LICENSE)
 [![Latest release](https://img.shields.io/github/release/pigeons2023/Ink-Canvas-Basic.svg?style=shield)](https://github.com/pigeons2023/Ink-Canvas-Basic/releases/latest)
 [![GitHub issues](https://img.shields.io/github/issues/pigeons2023/Ink-Canvas-Basic?logo=github)](https://github.com/pigeons2023/Ink-Canvas-Basic/issues)
