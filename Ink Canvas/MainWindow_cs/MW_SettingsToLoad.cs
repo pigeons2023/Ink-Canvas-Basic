@@ -702,6 +702,46 @@ namespace Ink_Canvas
                 {
                     ToggleSwitchAutoFoldInMSWhiteboard.IsOn = false;
                 }
+                if (Settings.Automation.IsAutoFoldInAdmoxWhiteboard)
+                {
+                    ToggleSwitchAutoFoldInAdmoxWhiteboard.IsOn = true;
+                }
+                else
+                {
+                    ToggleSwitchAutoFoldInAdmoxWhiteboard.IsOn = false;
+                }
+                if (Settings.Automation.IsAutoFoldInAdmoxBooth)
+                {
+                    ToggleSwitchAutoFoldInAdmoxBooth.IsOn = true;
+                }
+                else
+                {
+                    ToggleSwitchAutoFoldInAdmoxBooth.IsOn = false;
+                }
+                if (Settings.Automation.IsAutoFoldInQPoint)
+                {
+                    ToggleSwitchAutoFoldInQPoint.IsOn = true;
+                }
+                else
+                {
+                    ToggleSwitchAutoFoldInQPoint.IsOn = false;
+                }
+                if (Settings.Automation.IsAutoFoldInYiYunVisualPresenter)
+                {
+                    ToggleSwitchAutoFoldInYiYunVisualPresenter.IsOn = true;
+                }
+                else
+                {
+                    ToggleSwitchAutoFoldInYiYunVisualPresenter.IsOn = false;
+                }
+                if (Settings.Automation.IsAutoFoldInMaxHubWhiteboard)
+                {
+                    ToggleSwitchAutoFoldInMaxHubWhiteboard.IsOn = true;
+                }
+                else
+                {
+                    ToggleSwitchAutoFoldInMaxHubWhiteboard.IsOn = false;
+                }
                 if (Settings.Automation.IsAutoFoldInZHKTWhiteboard)
                 {
                     ToggleSwitchAutoFoldInZHKTWhiteboard.IsOn = true;

@@ -426,6 +426,46 @@ namespace Ink_Canvas
             StartOrStoptimerCheckAutoFold();
         }
 
+        private void ToggleSwitchAutoFoldInAdmoxWhiteboard_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (!isLoaded) return;
+            Settings.Automation.IsAutoFoldInAdmoxWhiteboard = ToggleSwitchAutoFoldInAdmoxWhiteboard.IsOn;
+            SaveSettingsToFile();
+            StartOrStoptimerCheckAutoFold();
+        }
+
+        private void ToggleSwitchAutoFoldInAdmoxBooth_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (!isLoaded) return;
+            Settings.Automation.IsAutoFoldInAdmoxBooth = ToggleSwitchAutoFoldInAdmoxBooth.IsOn;
+            SaveSettingsToFile();
+            StartOrStoptimerCheckAutoFold();
+        }
+
+        private void ToggleSwitchAutoFoldInQPoint_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (!isLoaded) return;
+            Settings.Automation.IsAutoFoldInQPoint = ToggleSwitchAutoFoldInQPoint.IsOn;
+            SaveSettingsToFile();
+            StartOrStoptimerCheckAutoFold();
+        }
+
+        private void ToggleSwitchAutoFoldInYiYunVisualPresenter_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (!isLoaded) return;
+            Settings.Automation.IsAutoFoldInYiYunVisualPresenter = ToggleSwitchAutoFoldInYiYunVisualPresenter.IsOn;
+            SaveSettingsToFile();
+            StartOrStoptimerCheckAutoFold();
+        }
+
+        private void ToggleSwitchAutoFoldInMaxHubWhiteboard_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (!isLoaded) return;
+            Settings.Automation.IsAutoFoldInMaxHubWhiteboard = ToggleSwitchAutoFoldInMaxHubWhiteboard.IsOn;
+            SaveSettingsToFile();
+            StartOrStoptimerCheckAutoFold();
+        }
+
         private void ToggleSwitchAutoFoldInZHKTWhiteboard_Toggled(object sender, RoutedEventArgs e)
         {
             if (!isLoaded) return;
@@ -758,6 +798,11 @@ namespace Ink_Canvas
             Settings.Automation.IsAutoFoldInWxBoardMain = false;
             Settings.Automation.IsAutoFoldInOldZyBoard = false;
             Settings.Automation.IsAutoFoldInMSWhiteboard = false;
+            Settings.Automation.IsAutoFoldInAdmoxWhiteboard = false;
+            Settings.Automation.IsAutoFoldInAdmoxBooth = false;
+            Settings.Automation.IsAutoFoldInQPoint = false;
+            Settings.Automation.IsAutoFoldInYiYunVisualPresenter = false;
+            Settings.Automation.IsAutoFoldInMaxHubWhiteboard = false;
             Settings.Automation.IsAutoFoldInZHKTWhiteboard = true;
             Settings.Automation.IsAutoFoldInZHKTZhanTai = true;
             Settings.Automation.IsAutoFoldInPPTSlideShow = false;

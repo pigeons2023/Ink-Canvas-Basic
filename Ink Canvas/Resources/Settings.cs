@@ -194,6 +194,11 @@ namespace Ink_Canvas
             || IsAutoFoldInOldZyBoard
             || IsAutoFoldInPPTSlideShow
             || IsAutoFoldInMSWhiteboard
+            || IsAutoFoldInAdmoxWhiteboard
+            || IsAutoFoldInAdmoxBooth
+            || IsAutoFoldInQPoint
+            || IsAutoFoldInYiYunVisualPresenter
+            || IsAutoFoldInMaxHubWhiteboard
             || IsAutoFoldInZHKTWhiteboard
             || IsAutoFoldInZHKTZhanTai;
 
@@ -232,6 +237,21 @@ namespace Ink_Canvas
 
         [JsonProperty("isAutoFoldInMSWhiteboard")]
         public bool IsAutoFoldInMSWhiteboard { get; set; } = false;
+
+        [JsonProperty("isAutoFoldInAdmoxWhiteboard")]
+        public bool IsAutoFoldInAdmoxWhiteboard { get; set; } = false;
+
+        [JsonProperty("isAutoFoldInAdmoxBooth")]
+        public bool IsAutoFoldInAdmoxBooth { get; set; } = false;
+
+        [JsonProperty("isAutoFoldInQPoint")]
+        public bool IsAutoFoldInQPoint { get; set; } = false;
+
+        [JsonProperty("isAutoFoldInYiYunVisualPresenter")]
+        public bool IsAutoFoldInYiYunVisualPresenter { get; set; } = false;
+
+        [JsonProperty("isAutoFoldInMaxHubWhiteboard")]
+        public bool IsAutoFoldInMaxHubWhiteboard { get; set; } = false;
 
         [JsonProperty("isAutoFoldInZHKTWhiteboard")]
         public bool IsAutoFoldInZHKTWhiteboard { get; set; } = true;

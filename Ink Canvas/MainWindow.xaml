@@ -4467,6 +4467,91 @@
                                 <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                                     <ikw:SimpleStackPanel Width="50">
                                         <ui:ToggleSwitch
+                                            Name="ToggleSwitchAutoFoldInAdmoxWhiteboard"
+                                            FontWeight="Bold"
+                                            IsOn="False"
+                                            OffContent="关"
+                                            OnContent="开"
+                                            Toggled="ToggleSwitchAutoFoldInAdmoxWhiteboard_Toggled" />
+                                    </ikw:SimpleStackPanel>
+                                    <TextBlock
+                                        Margin="0,0,14,0"
+                                        VerticalAlignment="Center"
+                                        FontSize="14"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="进入“安道白板”时自动收纳" />
+                                </ikw:SimpleStackPanel>
+                                <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                    <ikw:SimpleStackPanel Width="50">
+                                        <ui:ToggleSwitch
+                                            Name="ToggleSwitchAutoFoldInAdmoxBooth"
+                                            FontWeight="Bold"
+                                            IsOn="False"
+                                            OffContent="关"
+                                            OnContent="开"
+                                            Toggled="ToggleSwitchAutoFoldInAdmoxBooth_Toggled" />
+                                    </ikw:SimpleStackPanel>
+                                    <TextBlock
+                                        Margin="0,0,14,0"
+                                        VerticalAlignment="Center"
+                                        FontSize="14"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="进入“安道展台”时自动收纳" />
+                                </ikw:SimpleStackPanel>
+                                <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                    <ikw:SimpleStackPanel Width="50">
+                                        <ui:ToggleSwitch
+                                            Name="ToggleSwitchAutoFoldInQPoint"
+                                            FontWeight="Bold"
+                                            IsOn="False"
+                                            OffContent="关"
+                                            OnContent="开"
+                                            Toggled="ToggleSwitchAutoFoldInQPoint_Toggled" />
+                                    </ikw:SimpleStackPanel>
+                                    <TextBlock
+                                        Margin="0,0,14,0"
+                                        VerticalAlignment="Center"
+                                        FontSize="14"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="进入“艺云白板”时自动收纳" />
+                                </ikw:SimpleStackPanel>
+                                <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                    <ikw:SimpleStackPanel Width="50">
+                                        <ui:ToggleSwitch
+                                            Name="ToggleSwitchAutoFoldInYiYunVisualPresenter"
+                                            FontWeight="Bold"
+                                            IsOn="False"
+                                            OffContent="关"
+                                            OnContent="开"
+                                            Toggled="ToggleSwitchAutoFoldInYiYunVisualPresenter_Toggled" />
+                                    </ikw:SimpleStackPanel>
+                                    <TextBlock
+                                        Margin="0,0,14,0"
+                                        VerticalAlignment="Center"
+                                        FontSize="14"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="进入“艺云展台”时自动收纳" />
+                                </ikw:SimpleStackPanel>
+                                <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                    <ikw:SimpleStackPanel Width="50">
+                                        <ui:ToggleSwitch
+                                            Name="ToggleSwitchAutoFoldInMaxHubWhiteboard"
+                                            FontWeight="Bold"
+                                            IsOn="False"
+                                            OffContent="关"
+                                            OnContent="开"
+                                            Toggled="ToggleSwitchAutoFoldInMaxHubWhiteboard_Toggled" />
+                                    </ikw:SimpleStackPanel>
+                                    <TextBlock
+                                        Margin="0,0,14,0"
+                                        VerticalAlignment="Center"
+                                        FontSize="14"
+                                        Foreground="{DynamicResource SettingsPageForeground}"
+                                        Text="进入“MaxHub白板”时自动收纳" />
+                                </ikw:SimpleStackPanel>
+                                <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                    <ikw:SimpleStackPanel Width="50">
+                                        <ui:ToggleSwitch
                                             Name="ToggleSwitchAutoFoldInZHKTWhiteboard"
                                             FontWeight="Bold"
                                             IsOn="False"
