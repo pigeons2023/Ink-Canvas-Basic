@@ -1,0 +1,113 @@
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\Ink Canvas Basic.exe.config
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\Ink Canvas Basic.exe
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\Ink Canvas Basic.pdb
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\iNKORE.UI.WPF.dll
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\iNKORE.UI.WPF.Modern.Controls.dll
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\iNKORE.UI.WPF.Modern.dll
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\Microsoft.Office.Interop.PowerPoint.dll
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\Office.dll
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\Newtonsoft.Json.dll
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\OSVersionExt.dll
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\System.ValueTuple.dll
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\IACore.dll
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\IALoader.dll
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\IAWinFX.dll
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Ink Canvas.csproj.AssemblyReference.cache
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Interop.IWshRuntimeLibrary.dll
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Ink Canvas.csproj.ResolveComReference.cache
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Resources\BoardDrawShapeImageDictionary.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Resources\DrawShapeImageDictionary.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Resources\IconImageDictionary.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Resources\Styles\Dark-Board.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Resources\Styles\Dark-PopupWindow.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Resources\Styles\Dark.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Resources\Styles\Light-Board.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Resources\Styles\Light-PopupWindow.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Resources\Styles\Light.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\MainWindow.g.cs
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\ChangeLogWindow.g.cs
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\CountdownTimerWindow.g.cs
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\CycleProcessBar.g.cs
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\NamesInputWindow.g.cs
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\OperatingGuideWindow.g.cs
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\RandWindow.g.cs
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\YesOrNoNotificationWindow.g.cs
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\App.g.cs
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Ink Canvas Basic_MarkupCompile.cache
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Ink Canvas Basic_MarkupCompile.lref
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\App.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\MainWindow.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\ChangeLogWindow.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\CountdownTimerWindow.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\CycleProcessBar.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\NamesInputWindow.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\OperatingGuideWindow.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\RandWindow.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Windows\YesOrNoNotificationWindow.baml
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Ink Canvas Basic.g.resources
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Ink_Canvas.Properties.Resources.resources
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Ink Canvas.csproj.GenerateResource.cache
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Ink Canvas.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Ink Canvas.csproj.CoreCompileInputs.cache
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Ink Canvas.csproj.Up2Date
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Ink Canvas Basic.exe
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\obj\Debug\Ink Canvas Basic.pdb
+D:\Users\pigeons2023\Desktop\Code\Ink Canvas\bin\Debug\Ookii.Dialogs.Wpf.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\Ink Canvas Basic.exe.config
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\Ink Canvas Basic.exe
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\Ink Canvas Basic.pdb
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\iNKORE.UI.WPF.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\iNKORE.UI.WPF.Modern.Controls.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\iNKORE.UI.WPF.Modern.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\Microsoft.Office.Interop.PowerPoint.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\Office.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\Newtonsoft.Json.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\Ookii.Dialogs.Wpf.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\OSVersionExt.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\System.ValueTuple.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\IACore.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\IALoader.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\bin\Debug\IAWinFX.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Ink Canvas.csproj.AssemblyReference.cache
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Interop.IWshRuntimeLibrary.dll
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Ink Canvas.csproj.ResolveComReference.cache
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Resources\BoardDrawShapeImageDictionary.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Resources\DrawShapeImageDictionary.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Resources\IconImageDictionary.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Resources\Styles\Dark-Board.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Resources\Styles\Dark-PopupWindow.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Resources\Styles\Dark.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Resources\Styles\Light-Board.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Resources\Styles\Light-PopupWindow.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Resources\Styles\Light.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\MainWindow.g.cs
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\ChangeLogWindow.g.cs
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\CountdownTimerWindow.g.cs
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\CycleProcessBar.g.cs
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\NamesInputWindow.g.cs
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\OperatingGuideWindow.g.cs
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\RandWindow.g.cs
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\YesOrNoNotificationWindow.g.cs
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\App.g.cs
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Ink Canvas Basic_MarkupCompile.cache
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Ink Canvas Basic_MarkupCompile.lref
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\App.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\MainWindow.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\ChangeLogWindow.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\CountdownTimerWindow.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\CycleProcessBar.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\NamesInputWindow.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\OperatingGuideWindow.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\RandWindow.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Windows\YesOrNoNotificationWindow.baml
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Ink Canvas Basic.g.resources
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Ink_Canvas.Properties.Resources.resources
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Ink Canvas.csproj.GenerateResource.cache
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Ink Canvas.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Ink Canvas.csproj.CoreCompileInputs.cache
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Ink Canvas.sourcelink.json
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Ink Canvas.csproj.Up2Date
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Ink Canvas Basic.exe
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\Ink Canvas Basic.pdb

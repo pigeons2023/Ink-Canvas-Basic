@@ -1,0 +1,20 @@
+﻿Ink Canvas Basic
+
+
+winexe
+C#
+.cs
+D:\Users\pigeons2023\Desktop\git\Ink Canvas\obj\Debug\
+Ink_Canvas
+none
+false
+TRACE;DEBUG;NETFRAMEWORK;NET472;
+
+181936242938
+
+511757177220
+146-1119212484
+Ink Canvas\App.xaml;Ink Canvas\MainWindow.xaml;Ink Canvas\Resources\BoardDrawShapeImageDictionary.xaml;Ink Canvas\Resources\DrawShapeImageDictionary.xaml;Ink Canvas\Resources\IconImageDictionary.xaml;Ink Canvas\Resources\Styles\Dark-Board.xaml;Ink Canvas\Resources\Styles\Dark-PopupWindow.xaml;Ink Canvas\Resources\Styles\Dark.xaml;Ink Canvas\Resources\Styles\Light-Board.xaml;Ink Canvas\Resources\Styles\Light-PopupWindow.xaml;Ink Canvas\Resources\Styles\Light.xaml;Ink Canvas\Windows\ChangeLogWindow.xaml;Ink Canvas\Windows\CountdownTimerWindow.xaml;Ink Canvas\Windows\CycleProcessBar.xaml;Ink Canvas\Windows\NamesInputWindow.xaml;Ink Canvas\Windows\OperatingGuideWindow.xaml;Ink Canvas\Windows\RandWindow.xaml;Ink Canvas\Windows\YesOrNoNotificationWindow.xaml;
+
+False
+
