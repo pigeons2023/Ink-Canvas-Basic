@@ -75,7 +75,7 @@ namespace Ink_Canvas
                         BtnSwitch_Click(null, null);
                         MessageBox.Show("“希沃白板 5”已自动关闭");
                     }
-                    if (arg.Contains("智慧课堂"))
+                    if (arg.Contains("SmartClassPad_V4"))
                     {
                         BtnSwitch_Click(null, null);
                         MessageBox.Show("“智慧课堂系列软件”已自动关闭");

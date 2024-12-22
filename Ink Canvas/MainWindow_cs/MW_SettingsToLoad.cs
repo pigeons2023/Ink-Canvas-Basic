@@ -766,7 +766,7 @@ namespace Ink_Canvas
                 {
                     ToggleSwitchAutoFoldInPPTSlideShow.IsOn = false;
                 }
-                if (Settings.Automation.IsAutoKillEasiNote || Settings.Automation.IsAutoKillPptService)
+                if (Settings.Automation.IsAutoKillEasiNote || Settings.Automation.IsAutoKillPptService || Settings.Automation.IsAutoKillZHKT)
                 {
                     timerKillProcess.Start();
                 }
@@ -782,6 +782,14 @@ namespace Ink_Canvas
                 else
                 {
                     ToggleSwitchAutoKillEasiNote.IsOn = false;
+                }
+                if (Settings.Automation.IsAutoKillZHKT)
+                {
+                    ToggleSwitchAutoKillZHKT.IsOn = true;
+                }
+                else
+                {
+                    ToggleSwitchAutoKillZHKT.IsOn = false;
                 }
                 if (Settings.Automation.IsAutoKillPptService)
                 {

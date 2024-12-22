@@ -808,6 +808,7 @@ namespace Ink_Canvas
             Settings.Automation.IsAutoFoldInPPTSlideShow = false;
             Settings.Automation.IsAutoKillPptService = false;
             Settings.Automation.IsAutoKillEasiNote = true;
+            Settings.Automation.IsAutoKillZHKT = false;
             Settings.Automation.IsSaveScreenshotsInDateFolders = true;
             Settings.Automation.IsAutoSaveStrokesAtScreenshot = true;
             Settings.Automation.IsAutoSaveStrokesAtClear = true;

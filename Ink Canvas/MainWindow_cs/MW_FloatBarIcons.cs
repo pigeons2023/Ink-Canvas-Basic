@@ -1098,6 +1098,11 @@ namespace Ink_Canvas
             Process.Start("https://www.desmos.com/calculator?lang=zh-CN");
         }
 
+        private void UserGuide_Click(object sender, RoutedEventArgs e)
+        {
+            iNKORE.UI.WPF.Modern.Controls.MessageBox.Show("这里什么都没有，这里平平无奇，这里只有万丈深渊！");
+        }
+
         int BoundsWidth = 5;
 
         private void BtnHideInkCanvas_Click(object sender, RoutedEventArgs e)
