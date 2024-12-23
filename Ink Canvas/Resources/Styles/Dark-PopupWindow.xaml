@@ -3,7 +3,7 @@
     <SolidColorBrush x:Key="PopupWindowBorderBrush" Opacity="0.9" Color="White" />
     <SolidColorBrush x:Key="PopupWindowForeground" Color="White" />
 
-    <SolidColorBrush x:Key="PopupWindowDarkBlueBorderBackground" Opacity="0.9" Color="#1e3a8a" />
-    <SolidColorBrush x:Key="PopupWindowDarkBlueBorderBrush" Opacity="0.8" Color="#1e3a8a" />
+    <SolidColorBrush x:Key="PopupWindowDarkBlueBorderBackground" Opacity="0.8" Color="#FFA500" />
+    <SolidColorBrush x:Key="PopupWindowDarkBlueBorderBrush" Opacity="0.8" Color="#FF8C00" />
     <SolidColorBrush x:Key="PopupWindowDarkBlueBorderForeground" Opacity="0.8" Color="White" />
 </ResourceDictionary>

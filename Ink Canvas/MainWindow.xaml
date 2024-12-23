@@ -3185,7 +3185,7 @@
                                         </Grid>
                                         <TextBlock
                                             Foreground="{DynamicResource SettingsPageAnnotationForeground}"
-                                            Text="# 正确的代理返回数据应为三位版本号，例如 &quot;4.0.0&quot;。"
+                                            Text="# 正确的代理返回数据应为三位版本号，例如 &quot;6.0.0&quot;。"
                                             TextWrapping="Wrap"
                                             Visibility="{Binding ElementName=AutoUpdateWithProxy_Title, Path=Visibility}" />
                                         <TextBlock
@@ -6950,7 +6950,7 @@
                             <Grid Width="0">
                                 <Border
                                     Name="BorderTools"
-                                    Margin="-120,-278,-40,40"
+                                    Margin="-105,-230,-80,40"
                                     Background="{DynamicResource FloatBarBackground}"
                                     BorderBrush="{DynamicResource FloatBarBorderBrush}"
                                     BorderThickness="1"
@@ -7062,8 +7062,6 @@
                                                             Foreground="{DynamicResource FloatBarForeground}" />
                                                     </ikw:SimpleStackPanel>
                                                 </Button>
-                                            </ikw:SimpleStackPanel>
-                                            <ikw:SimpleStackPanel Height="45" Orientation="Horizontal">
                                                 <Button
                                                     Width="45"
                                                     Height="45"
@@ -7088,6 +7086,8 @@
                                                             Foreground="{DynamicResource FloatBarForeground}" />
                                                     </ikw:SimpleStackPanel>
                                                 </Button>
+                                            </ikw:SimpleStackPanel>
+                                            <ikw:SimpleStackPanel Height="45" Orientation="Horizontal">
                                                 <Button
                                                     Width="45"
                                                     Height="45"
@@ -7136,8 +7136,6 @@
                                                             Foreground="{DynamicResource FloatBarForeground}" />
                                                     </ikw:SimpleStackPanel>
                                                 </Button>
-                                            </ikw:SimpleStackPanel>
-                                            <ikw:SimpleStackPanel Height="45" Orientation="Horizontal">
                                                 <Button
                                                     Width="45"
                                                     Height="45"
@@ -7182,30 +7180,6 @@
                                                         <Label
                                                             HorizontalAlignment="Center"
                                                             Content="说明书"
-                                                            FontSize="10"
-                                                            Foreground="{DynamicResource FloatBarForeground}" />
-                                                    </ikw:SimpleStackPanel>
-                                                </Button>
-                                                <Button
-                                                    Width="45"
-                                                    Height="45"
-                                                    Padding="0"
-                                                    BorderThickness="0"
-                                                    Click="SymbolIconSettings_Click">
-                                                    <ikw:SimpleStackPanel
-                                                        Width="40"
-                                                        Height="40"
-                                                        Orientation="Vertical">
-                                                        <ui:FontIcon
-                                                            Width="22"
-                                                            Height="22"
-                                                            Margin="0,4,0,1"
-                                                            FontFamily="{StaticResource FluentIconFontFamily}"
-                                                            Foreground="{DynamicResource FloatBarForeground}"
-                                                            Glyph="&#xe713;" />
-                                                        <Label
-                                                            HorizontalAlignment="Center"
-                                                            Content="设置"
                                                             FontSize="10"
                                                             Foreground="{DynamicResource FloatBarForeground}" />
                                                     </ikw:SimpleStackPanel>
@@ -7284,8 +7258,56 @@
                                                             Foreground="{DynamicResource FloatBarForeground}" />
                                                     </ikw:SimpleStackPanel>
                                                 </Button>
+                                                <Button
+                                                    Width="45"
+                                                    Height="45"
+                                                    Padding="0"
+                                                    BorderThickness="0"
+                                                    Click="SymbolIconSettings_Click">
+                                                    <ikw:SimpleStackPanel
+                                                        Width="40"
+                                                        Height="40"
+                                                        Orientation="Vertical">
+                                                        <ui:FontIcon
+                                                            Width="22"
+                                                            Height="22"
+                                                            Margin="0,4,0,1"
+                                                            FontFamily="{StaticResource FluentIconFontFamily}"
+                                                            Foreground="{DynamicResource FloatBarForeground}"
+                                                            Glyph="&#xe713;" />
+                                                        <Label
+                                                            HorizontalAlignment="Center"
+                                                            Content="设置"
+                                                            FontSize="10"
+                                                            Foreground="{DynamicResource FloatBarForeground}" />
+                                                    </ikw:SimpleStackPanel>
+                                                </Button>
                                             </ikw:SimpleStackPanel>
                                             <ikw:SimpleStackPanel Height="45" Orientation="Horizontal">
+                                                <Button
+                                                    Width="45"
+                                                    Height="45"
+                                                    Padding="0"
+                                                    BorderThickness="0"
+                                                    >
+                                                    <ikw:SimpleStackPanel
+                                                        Width="40"
+                                                        Height="40"
+                                                        Orientation="Vertical">
+                                                        <ui:FontIcon
+                                                            Width="22"
+                                                            Height="22"
+                                                            Margin="0,4,0,1"
+                                                            FontFamily="{StaticResource FluentIconFontFamily}"
+                                                            Foreground="{DynamicResource FloatBarForeground}"
+                                                            Glyph="&#59154;" />
+                                                        <Label
+                                                            HorizontalAlignment="Center"
+                                                            Content="更新中..."
+                                                            FontSize="10"
+                                                            Foreground="{DynamicResource FloatBarForeground}" />
+                                                    </ikw:SimpleStackPanel>
+                                                </Button>
                                                 <Button
                                                     Width="45"
                                                     Height="45"

@@ -60,6 +60,7 @@
 	  <None Remove="Resources\DeveloperAvatars\guoguo.png" />
 	  <None Remove="Resources\DeveloperAvatars\wuqi.png" />
 	  <None Remove="Resources\Icons-png\check-box-background.png" />
+	  <None Remove="Resources\Icons-png\check-box-background_Old.png" />
 	  <None Remove="Resources\Icons-png\icc-transparent-dark-small.png" />
 	  <None Remove="Resources\Icons-png\icc.png" />
 	  <None Remove="Resources\Icons-png\kuanciya.png" />
@@ -156,6 +157,7 @@
 		<Resource Include="Resources\DeveloperAvatars\STBBRD.png" />
 		<Resource Include="Resources\DeveloperAvatars\wuqi.png" />
 		<Resource Include="Resources\DeveloperAvatars\WXRIW.png" />
+		<Resource Include="Resources\Icons-png\check-box-background_Old.png" />
 		<Resource Include="Resources\Icons-png\check-box-background.png" />
 		<Resource Include="Resources\Icons-png\icc-transparent-dark-small.png" />
 		<Resource Include="Resources\Icons-png\icc.png" />
