@@ -774,7 +774,7 @@ namespace Ink_Canvas
             Settings.Advanced.IsSecondConfimeWhenShutdownApp = false;
             Settings.Advanced.IsEnableEdgeGestureUtil = false;
 
-            Settings.Appearance.IsEnableDisPlayFloatBarText = false;
+            Settings.Appearance.IsEnableDisPlayFloatBarText = true;
             Settings.Appearance.IsEnableDisPlayNibModeToggler = false;
             Settings.Appearance.IsColorfulViewboxFloatingBar = false;
             Settings.Appearance.EnableViewboxFloatingBarScaleTransform = false;
@@ -817,16 +817,16 @@ namespace Ink_Canvas
             Settings.Automation.AutoDelSavedFiles = AutoDelSavedFilesDays;
             Settings.Automation.AutoDelSavedFilesDaysThreshold = AutoDelSavedFilesDaysThreshold;
 
-            Settings.PowerPointSettings.IsShowPPTNavigationBottom = false;
+            Settings.PowerPointSettings.IsShowPPTNavigationBottom = true;
             Settings.PowerPointSettings.IsShowBottomPPTNavigationPanel = true;
-            Settings.PowerPointSettings.IsShowSidePPTNavigationPanel = true;
+            Settings.PowerPointSettings.IsShowSidePPTNavigationPanel = false;
             Settings.PowerPointSettings.PowerPointSupport = true;
             Settings.PowerPointSettings.IsShowCanvasAtNewSlideShow = true;
             Settings.PowerPointSettings.IsNoClearStrokeOnSelectWhenInPowerPoint = true;
             Settings.PowerPointSettings.IsShowStrokeOnSelectInPowerPoint = false;
             Settings.PowerPointSettings.IsAutoSaveStrokesInPowerPoint = true;
             Settings.PowerPointSettings.IsAutoSaveScreenShotInPowerPoint = true;
-            Settings.PowerPointSettings.IsNotifyPreviousPage = false;
+            Settings.PowerPointSettings.IsNotifyPreviousPage = true;
             Settings.PowerPointSettings.IsNotifyHiddenPage = false;
             Settings.PowerPointSettings.IsNotifyAutoPlayPresentation = true;
             Settings.PowerPointSettings.IsEnableTwoFingerGestureInPresentationMode = false;
@@ -843,7 +843,7 @@ namespace Ink_Canvas
             Settings.Canvas.UsingWhiteboard = false;
             Settings.Canvas.HyperbolaAsymptoteOption = 0;
 
-            Settings.Gesture.MatrixTransformCenterPoint = MatrixTransformCenterPointOptions.CanvasCenterPoint;
+            Settings.Gesture.MatrixTransformCenterPoint = MatrixTransformCenterPointOptions.GestureOperationCenterPoint;
             Settings.Gesture.AutoSwitchTwoFingerGesture = true;
             Settings.Gesture.IsEnableTwoFingerTranslate = true;
             Settings.Gesture.IsEnableTwoFingerZoom = false;
@@ -857,8 +857,8 @@ namespace Ink_Canvas
             Settings.Startup.IsAutoUpdateWithSilence = true;
             Settings.Startup.IsAutoUpdateWithProxy = true;
             Settings.Startup.AutoUpdateProxy = "https://mirror.ghproxy.com/";
-            Settings.Startup.AutoUpdateWithSilenceStartTime = "18:20";
-            Settings.Startup.AutoUpdateWithSilenceEndTime = "07:40";
+            Settings.Startup.AutoUpdateWithSilenceStartTime = "18:00";
+            Settings.Startup.AutoUpdateWithSilenceEndTime = "07:20";
             Settings.Startup.IsFoldAtStartup = false;
         }
 

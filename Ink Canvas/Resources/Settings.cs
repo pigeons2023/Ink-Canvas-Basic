@@ -37,7 +37,7 @@ namespace Ink_Canvas
         [JsonProperty("inkStyle")]
         public int InkStyle { get; set; } = 0;
         [JsonProperty("eraserSize")]
-        public int EraserSize { get; set; } = 2;
+        public int EraserSize { get; set; } = 1;
         [JsonProperty("eraserType")] 
         public int EraserType { get; set; } = 0; // 0 - 图标切换模式      1 - 面积擦     2 - 线条擦
         [JsonProperty("hideStrokeWhenSelecting")]
@@ -74,7 +74,7 @@ namespace Ink_Canvas
         [JsonProperty("isEnableTwoFingerRotation")]
         public bool IsEnableTwoFingerRotation { get; set; } = false;
         [JsonProperty("isEnableTwoFingerRotationOnSelection")]
-        public bool IsEnableTwoFingerRotationOnSelection { get; set; } = false;
+        public bool IsEnableTwoFingerRotationOnSelection { get; set; } = true;
 
         [JsonProperty("matrixTransformCenterPoint")]
         public MatrixTransformCenterPointOptions MatrixTransformCenterPoint { get; set; } = MatrixTransformCenterPointOptions.CanvasCenterPoint;
@@ -116,7 +116,7 @@ namespace Ink_Canvas
     public class Appearance
     {
         [JsonProperty("isEnableDisPlayFloatBarText")]
-        public bool IsEnableDisPlayFloatBarText { get; set; } = false;
+        public bool IsEnableDisPlayFloatBarText { get; set; } = true;
         [JsonProperty("isEnableDisPlayNibModeToggler")]
         public bool IsEnableDisPlayNibModeToggler { get; set; } = true;
         [JsonProperty("isColorfulViewboxFloatingBar")]
@@ -148,11 +148,11 @@ namespace Ink_Canvas
         [JsonProperty("isShowPPTNavigationBottom")]
         public bool IsShowPPTNavigationBottom { get; set; } = true;
         [JsonProperty("isShowPPTNavigationSides")]
-        public bool IsShowPPTNavigationSides { get; set; } = true;
+        public bool IsShowPPTNavigationSides { get; set; } = false;
         [JsonProperty("isShowBottomPPTNavigationPanel")]
         public bool IsShowBottomPPTNavigationPanel { get; set; } = true;
         [JsonProperty("isShowSidePPTNavigationPanel")]
-        public bool IsShowSidePPTNavigationPanel { get; set; } = true;
+        public bool IsShowSidePPTNavigationPanel { get; set; } = false;
         [JsonProperty("powerPointSupport")]
         public bool PowerPointSupport { get; set; } = true;
         [JsonProperty("isShowCanvasAtNewSlideShow")]
@@ -166,9 +166,9 @@ namespace Ink_Canvas
         [JsonProperty("isAutoSaveScreenShotInPowerPoint")]
         public bool IsAutoSaveScreenShotInPowerPoint { get; set; } = false;
         [JsonProperty("isNotifyPreviousPage")]
-        public bool IsNotifyPreviousPage { get; set; } = false;
+        public bool IsNotifyPreviousPage { get; set; } = true;
         [JsonProperty("isNotifyHiddenPage")]
-        public bool IsNotifyHiddenPage { get; set; } = true;
+        public bool IsNotifyHiddenPage { get; set; } = false;
         [JsonProperty("isNotifyAutoPlayPresentation")]
         public bool IsNotifyAutoPlayPresentation { get; set; } = true;
         [JsonProperty("isEnableTwoFingerGestureInPresentationMode")]
