@@ -837,7 +837,7 @@ namespace Ink_Canvas
             Settings.Canvas.InkAlpha = 80;
             Settings.Canvas.IsShowCursor = false;
             Settings.Canvas.InkStyle = 0;
-            Settings.Canvas.EraserSize = 1;
+            Settings.Canvas.EraserSize = 0;
             Settings.Canvas.EraserType = 0;
             Settings.Canvas.HideStrokeWhenSelecting = false;
             Settings.Canvas.UsingWhiteboard = false;
