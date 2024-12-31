@@ -119,7 +119,7 @@ namespace Ink_Canvas
                     (WinTabWindowsChecker.IsWindowExisted("WhiteBoard - DrawingWindow")
                     || WinTabWindowsChecker.IsWindowExisted("InstantAnnotationWindow"))
                     || Settings.Automation.IsAutoFoldInZHKTZhanTai_New && // 智慧课堂展台
-                    (WinTabWindowsChecker.IsWindowExisted("YJCamera")))
+                    (WinTabWindowsChecker.IsWindowExisted("CamShow")))
                 {
                     if (!unfoldFloatingBarByUser && !isFloatingBarFolded)
                     {
