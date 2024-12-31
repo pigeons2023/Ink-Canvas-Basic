@@ -117,7 +117,9 @@ namespace Ink_Canvas
                     || Settings.Automation.IsAutoFoldInZHKTZhanTai && windowProcessName == "YJCamera" // 智慧课堂展台
                     || Settings.Automation.IsAutoFoldInOldZyBoard && // 中原旧白板
                     (WinTabWindowsChecker.IsWindowExisted("WhiteBoard - DrawingWindow")
-                    || WinTabWindowsChecker.IsWindowExisted("InstantAnnotationWindow")))
+                    || WinTabWindowsChecker.IsWindowExisted("InstantAnnotationWindow"))
+                    || Settings.Automation.IsAutoFoldInZHKTZhanTai_New && // 智慧课堂展台
+                    (WinTabWindowsChecker.IsWindowExisted("YJCamera")))
                 {
                     if (!unfoldFloatingBarByUser && !isFloatingBarFolded)
                     {

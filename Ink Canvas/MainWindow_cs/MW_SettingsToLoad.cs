@@ -758,6 +758,14 @@ namespace Ink_Canvas
                 {
                     ToggleSwitchAutoFoldInZHKTZhanTai.IsOn = false;
                 }
+                if (Settings.Automation.IsAutoFoldInZHKTZhanTai_New)
+                {
+                    ToggleSwitchAutoFoldInZHKTZhanTai_New.IsOn = true;
+                }
+                else
+                {
+                    ToggleSwitchAutoFoldInZHKTZhanTai_New.IsOn = false;
+                }
                 if (Settings.Automation.IsAutoFoldInPPTSlideShow)
                 {
                     ToggleSwitchAutoFoldInPPTSlideShow.IsOn = true;

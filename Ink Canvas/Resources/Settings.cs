@@ -200,7 +200,8 @@ namespace Ink_Canvas
             || IsAutoFoldInYiYunVisualPresenter
             || IsAutoFoldInMaxHubWhiteboard
             || IsAutoFoldInZHKTWhiteboard
-            || IsAutoFoldInZHKTZhanTai;
+            || IsAutoFoldInZHKTZhanTai
+            || IsAutoFoldInZHKTZhanTai_New;
 
         [JsonProperty("isAutoFoldInEasiNote")]
         public bool IsAutoFoldInEasiNote { get; set; } = false;
@@ -257,7 +258,10 @@ namespace Ink_Canvas
         public bool IsAutoFoldInZHKTWhiteboard { get; set; } = true;
 
         [JsonProperty("isAutoFoldInZHKTZhanTai")]
-        public bool IsAutoFoldInZHKTZhanTai { get; set; } = true;
+        public bool IsAutoFoldInZHKTZhanTai { get; set; } = false;
+
+        [JsonProperty("isAutoFoldInZHKTZhanTai_New")]
+        public bool IsAutoFoldInZHKTZhanTai_New { get; set; } = true;
 
         [JsonProperty("isAutoFoldInPPTSlideShow")]
         public bool IsAutoFoldInPPTSlideShow { get; set; } = false;

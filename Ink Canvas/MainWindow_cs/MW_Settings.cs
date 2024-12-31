@@ -482,6 +482,13 @@ namespace Ink_Canvas
             StartOrStoptimerCheckAutoFold();
         }
 
+        private void ToggleSwitchAutoFoldInZHKTZhanTai_New_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (!isLoaded) return;
+            Settings.Automation.IsAutoFoldInZHKTZhanTai_New = ToggleSwitchAutoFoldInZHKTZhanTai_New.IsOn;
+            SaveSettingsToFile();
+            StartOrStoptimerCheckAutoFold();
+        }
 
         private void ToggleSwitchAutoFoldInPPTSlideShow_Toggled(object sender, RoutedEventArgs e)
         {
@@ -804,7 +811,8 @@ namespace Ink_Canvas
             Settings.Automation.IsAutoFoldInYiYunVisualPresenter = false;
             Settings.Automation.IsAutoFoldInMaxHubWhiteboard = false;
             Settings.Automation.IsAutoFoldInZHKTWhiteboard = true;
-            Settings.Automation.IsAutoFoldInZHKTZhanTai = true;
+            Settings.Automation.IsAutoFoldInZHKTZhanTai = false;
+            Settings.Automation.IsAutoFoldInZHKTZhanTai_New = true;
             Settings.Automation.IsAutoFoldInPPTSlideShow = false;
             Settings.Automation.IsAutoKillPptService = false;
             Settings.Automation.IsAutoKillEasiNote = true;
