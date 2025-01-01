@@ -2993,7 +2993,7 @@
         <Border
             Name="BorderSettings"
             Width="440"
-            Margin="0,150,0,-1172"
+            Margin="0,150,0,-1419"
             HorizontalAlignment="Center"
             Background="{DynamicResource SettingsPageBackground}"
             BorderBrush="{DynamicResource SettingsPageBorderBrush}"
@@ -3753,6 +3753,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchSupportPowerPoint_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/Powerpoint.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -3770,6 +3772,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchSupportWPS_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/WPS.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4338,6 +4342,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInEasiNote_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/EasiNote.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4355,6 +4361,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInEasiNoteIgnoreDesktopAnno_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/EasiNote.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4372,6 +4380,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInEasiCamera_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/EasiCamera.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4389,6 +4399,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInEasiNote3C_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/EasiNote3C.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4406,6 +4418,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInEasiNote5C_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/EasiNote5C.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4423,6 +4437,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInSeewoPincoTeacher_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/SeewoPinco.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4440,6 +4456,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInHiteTouchPro_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/HiteBoard.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4457,6 +4475,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInHiteCamera_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/HiteCamera.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4474,6 +4494,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInWxBoardMain_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/WenXiang.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4491,6 +4513,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInOldZyBoard_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/Donview.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4508,6 +4532,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInMSWhiteboard_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/Whiteboard.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4525,6 +4551,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInAdmoxWhiteboard_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/AdmoxWhiteboard.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4542,6 +4570,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInAdmoxBooth_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/AdmoxBooth.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4559,6 +4589,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInQPoint_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/YiYunWhiteboard.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4576,6 +4608,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInYiYunVisualPresenter_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/YiYunVisualPresenter.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4593,6 +4627,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInMaxHubWhiteboard_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/MaxHubWhiteboard.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4610,6 +4646,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInZHKTWhiteboard_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/E_Board.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4648,12 +4686,14 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInZHKTZhanTai_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/YJCamera.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
                                         FontSize="14"
                                         Foreground="{DynamicResource SettingsPageForeground}"
-                                        Text="进入“智慧课堂展台”时自动收纳[老版]" />
+                                        Text="进入“智慧课堂展台”时自动收纳（即将废弃）" />
                                 </ikw:SimpleStackPanel>
                                 <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                                     <ikw:SimpleStackPanel Width="50">
@@ -4665,12 +4705,14 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInZHKTZhanTai_New_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/YJCamera.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
                                         FontSize="14"
                                         Foreground="{DynamicResource SettingsPageForeground}"
-                                        Text="进入“智慧课堂展台”时自动收纳[新版]" />
+                                        Text="进入“智慧课堂展台”时自动收纳" />
                                     <Border Height="20" CornerRadius="3" Background="#1e3a8a" Margin="0,0,12,0"
                                                 Padding="4,0">
                                         <ikw:SimpleStackPanel Orientation="Horizontal" Spacing="3"
@@ -4703,6 +4745,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoFoldInPPTSlideShow_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/Powerpoint.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4735,6 +4779,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoKillPptService_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/PPTTools.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4756,6 +4802,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoKillEasiNote_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/EasiNote.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4773,6 +4821,8 @@
                                             OnContent="开"
                                             Toggled="ToggleSwitchAutoKillZHKT_Toggled" />
                                     </ikw:SimpleStackPanel>
+                                    <Image Source="/Resources/Icons-png/SmartClassPad_V4.png" Margin="0,0,6,0" Width="28"
+                                               Height="28" VerticalAlignment="Center" />
                                     <TextBlock
                                         Margin="0,0,14,0"
                                         VerticalAlignment="Center"
@@ -4782,47 +4832,49 @@
                                     <ikw:SimpleStackPanel HorizontalAlignment="Left" Orientation="Horizontal">
                                         <Border Height="20" CornerRadius="3" Background="#1e3a8a" Margin="0,0,6,0"
                                                 Padding="4,0">
-                                        <ikw:SimpleStackPanel Orientation="Horizontal" Spacing="3"
+                                            <ikw:SimpleStackPanel Orientation="Horizontal" Spacing="3"
                                                                  VerticalAlignment="Center">
-                                            <Image Width="16" Height="16" VerticalAlignment="Center">
-                                                <Image.Source>
-                                                    <DrawingImage>
-                                                        <DrawingImage.Drawing>
-                                                            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
-                                                                <GeometryDrawing Brush="#dbeafe"
+                                                <Image Width="16" Height="16" VerticalAlignment="Center">
+                                                    <Image.Source>
+                                                        <DrawingImage>
+                                                            <DrawingImage.Drawing>
+                                                                <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                                                                    <GeometryDrawing Brush="#dbeafe"
                                                                                      Geometry="F0 M24,24z M0,0z M18.75,4C18.75,3.58579 18.4142,3.25 18,3.25 17.5858,3.25 17.25,3.58579 17.25,4 17.25,4.33152 17.1183,4.64946 16.8839,4.88388 16.6495,5.1183 16.3315,5.25 16,5.25 15.5858,5.25 15.25,5.58579 15.25,6 15.25,6.41421 15.5858,6.75 16,6.75 16.3315,6.75 16.6495,6.8817 16.8839,7.11612 17.1183,7.35054 17.25,7.66848 17.25,8 17.25,8.41421 17.5858,8.75 18,8.75 18.4142,8.75 18.75,8.41421 18.75,8 18.75,7.66848 18.8817,7.35054 19.1161,7.11612 19.3505,6.8817 19.6685,6.75 20,6.75 20.4142,6.75 20.75,6.41421 20.75,6 20.75,5.58579 20.4142,5.25 20,5.25 19.6685,5.25 19.3505,5.1183 19.1161,4.88388 18.8817,4.64946 18.75,4.33152 18.75,4z M9.75,6C9.75,5.58579 9.41421,5.25 9,5.25 8.58579,5.25 8.25,5.58579 8.25,6 8.25,7.39239 7.69688,8.72774 6.71231,9.71231 5.72774,10.6969 4.39239,11.25 3,11.25 2.58579,11.25 2.25,11.5858 2.25,12 2.25,12.4142 2.58579,12.75 3,12.75 4.39239,12.75 5.72774,13.3031 6.71231,14.2877 7.69688,15.2723 8.25,16.6076 8.25,18 8.25,18.4142 8.58579,18.75 9,18.75 9.41421,18.75 9.75,18.4142 9.75,18 9.75,16.6076 10.3031,15.2723 11.2877,14.2877 12.2723,13.3031 13.6076,12.75 15,12.75 15.4142,12.75 15.75,12.4142 15.75,12 15.75,11.5858 15.4142,11.25 15,11.25 13.6076,11.25 12.2723,10.6969 11.2877,9.71231 10.3031,8.72774 9.75,7.39239 9.75,6z M18.75,16C18.75,15.5858 18.4142,15.25 18,15.25 17.5858,15.25 17.25,15.5858 17.25,16 17.25,16.3315 17.1183,16.6495 16.8839,16.8839 16.6495,17.1183 16.3315,17.25 16,17.25 15.5858,17.25 15.25,17.5858 15.25,18 15.25,18.4142 15.5858,18.75 16,18.75 16.3315,18.75 16.6495,18.8817 16.8839,19.1161 17.1183,19.3505 17.25,19.6685 17.25,20 17.25,20.4142 17.5858,20.75 18,20.75 18.4142,20.75 18.75,20.4142 18.75,20 18.75,19.6685 18.8817,19.3505 19.1161,19.1161 19.3505,18.8817 19.6685,18.75 20,18.75 20.4142,18.75 20.75,18.4142 20.75,18 20.75,17.5858 20.4142,17.25 20,17.25 19.6685,17.25 19.3505,17.1183 19.1161,16.8839 18.8817,16.6495 18.75,16.3315 18.75,16z" />
-                                                            </DrawingGroup>
-                                                        </DrawingImage.Drawing>
-                                                    </DrawingImage>
-                                                </Image.Source>
-                                            </Image>
-                                            <TextBlock Foreground="#dbeafe" Text="新功能" FontSize="12"
+                                                                </DrawingGroup>
+                                                            </DrawingImage.Drawing>
+                                                        </DrawingImage>
+                                                    </Image.Source>
+                                                </Image>
+                                                <TextBlock Foreground="#dbeafe" Text="新功能" FontSize="12"
                                                            VerticalAlignment="Center">
-                                            </TextBlock>
-                                        </ikw:SimpleStackPanel>
-                                    </Border>
-                                    <Border Height="20" CornerRadius="3" Background="#854d0e" Margin="0,0,12,0"
+                                                </TextBlock>
+                                            </ikw:SimpleStackPanel>
+                                        </Border>
+                                        <Border Height="20" CornerRadius="3" Background="#854d0e" Margin="0,0,12,0"
                                             Padding="4,0">
-                                        <ikw:SimpleStackPanel Orientation="Horizontal" Spacing="3"
+                                            <ikw:SimpleStackPanel Orientation="Horizontal" Spacing="3"
                                                              VerticalAlignment="Center">
                                                 <Image Width="15" Height="15" VerticalAlignment="Center">
-                                                <Image.Source>
-                                                    <DrawingImage>
-                                                        <DrawingImage.Drawing>
-                                                            <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
-                                                                <GeometryDrawing Brush="#fef9c3" Geometry="F1 M24,24z M0,0z M11.0128,12.0001L11.0128,21.7541C8.82443,21.0462 6.86303,19.7703 5.32881,18.0567 3.79459,16.3431 2.74247,14.2532 2.27982,12.0001L11.0138,12.0001 11.0128,12.0001z M20.2968,15.7941C18.6969,18.6172,16.0991,20.7399,13.0138,21.7451L13.0128,12.0001 21.7208,12.0001C21.448,13.3316,20.9675,14.6119,20.2968,15.7941z M11.0138,2.52612L11.0128,10.0001 2.02682,10.0001C1.95882,8.56812 2.12782,7.12012 2.54082,5.71812 2.60393,5.50338 2.73726,5.31601 2.91947,5.18602 3.10167,5.05603 3.32223,4.99092 3.54582,5.00112 6.13403,5.11958 8.68099,4.32065 10.7378,2.74512L11.0138,2.52612z M13.0128,10.0001L13.0128,2.54712 12.9228,2.47412C14.9401,4.14969,17.4897,5.04942,20.1118,5.01112L20.4538,5.00112C20.6774,4.99092 20.898,5.05603 21.0802,5.18602 21.2624,5.31601 21.3957,5.50338 21.4588,5.71812 21.8718,7.12112 22.0408,8.56812 21.9728,10.0001L13.0128,10.0001z" />
-                                                            </DrawingGroup>
-                                                        </DrawingImage.Drawing>
-                                                    </DrawingImage>
-                                                </Image.Source>
-                                            </Image>
-                                            <TextBlock Foreground="#fef9c3" Text="管理员" FontSize="12"
+                                                    <Image.Source>
+                                                        <DrawingImage>
+                                                            <DrawingImage.Drawing>
+                                                                <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                                                                    <GeometryDrawing Brush="#fef9c3" Geometry="F1 M24,24z M0,0z M11.0128,12.0001L11.0128,21.7541C8.82443,21.0462 6.86303,19.7703 5.32881,18.0567 3.79459,16.3431 2.74247,14.2532 2.27982,12.0001L11.0138,12.0001 11.0128,12.0001z M20.2968,15.7941C18.6969,18.6172,16.0991,20.7399,13.0138,21.7451L13.0128,12.0001 21.7208,12.0001C21.448,13.3316,20.9675,14.6119,20.2968,15.7941z M11.0138,2.52612L11.0128,10.0001 2.02682,10.0001C1.95882,8.56812 2.12782,7.12012 2.54082,5.71812 2.60393,5.50338 2.73726,5.31601 2.91947,5.18602 3.10167,5.05603 3.32223,4.99092 3.54582,5.00112 6.13403,5.11958 8.68099,4.32065 10.7378,2.74512L11.0138,2.52612z M13.0128,10.0001L13.0128,2.54712 12.9228,2.47412C14.9401,4.14969,17.4897,5.04942,20.1118,5.01112L20.4538,5.00112C20.6774,4.99092 20.898,5.05603 21.0802,5.18602 21.2624,5.31601 21.3957,5.50338 21.4588,5.71812 21.8718,7.12112 22.0408,8.56812 21.9728,10.0001L13.0128,10.0001z" />
+                                                                </DrawingGroup>
+                                                            </DrawingImage.Drawing>
+                                                        </DrawingImage>
+                                                    </Image.Source>
+                                                </Image>
+                                                <TextBlock Foreground="#fef9c3" Text="管理员" FontSize="12"
                                                        VerticalAlignment="Center">
-                                            </TextBlock>
-                                        </ikw:SimpleStackPanel>
-                                    </Border>
+                                                </TextBlock>
+                                            </ikw:SimpleStackPanel>
+                                        </Border>
                                     </ikw:SimpleStackPanel>
+
                                 </ikw:SimpleStackPanel>
+
                                 <Line
                                     Margin="0,4,0,4"
                                     HorizontalAlignment="Center"
@@ -5094,25 +5146,41 @@
                                         FontWeight="Bold"
                                         Foreground="{DynamicResource SettingsPageForeground}"
                                         Text="ICB开发者: " />
+
                                     <Image
-                                        Width="20"
-                                        Height="20"
-                                        RenderOptions.BitmapScalingMode="HighQuality"
-                                        Source="/Resources/DeveloperAvatars/guoguo.png" />
+                                            Width="20"
+                                            Height="20"
+                                            Margin="3,0"
+                                            RenderOptions.BitmapScalingMode="HighQuality"
+                                            Source="/Resources/DeveloperAvatars/guoguo.png">
+                                        <Image.Clip>
+                                            <EllipseGeometry
+                                                    Center="10,10"
+                                                    RadiusX="10"
+                                                    RadiusY="10" />
+                                        </Image.Clip>
+                                    </Image>
                                     <TextBlock
                                         FontSize="15"
                                         Foreground="{DynamicResource SettingsPageForeground}"
                                         Text="Wang RuiGuo  " />
                                     <Image
-                                        Width="20"
-                                        Height="20"
-                                        RenderOptions.BitmapScalingMode="HighQuality"
-                                        Source="/Resources/DeveloperAvatars/wuqi.png" />
+                                            Width="20"
+                                            Height="20"
+                                            Margin="3,0"
+                                            RenderOptions.BitmapScalingMode="HighQuality"
+                                            Source="/Resources/DeveloperAvatars/wuqi.png">
+                                        <Image.Clip>
+                                            <EllipseGeometry
+                                                    Center="10,10"
+                                                    RadiusX="10"
+                                                    RadiusY="10" />
+                                        </Image.Clip>
+                                    </Image>
                                     <TextBlock
                                         FontSize="15"
                                         Foreground="{DynamicResource SettingsPageForeground}"
                                         Text="Wu Qi" />
-
                                 </WrapPanel>
                                 <Line
                                     Margin="0,4,0,0"

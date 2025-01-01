@@ -60,9 +60,28 @@
 	  <None Remove="Resources\DeveloperAvatars\dubi906w.jpg" />
 	  <None Remove="Resources\DeveloperAvatars\guoguo.png" />
 	  <None Remove="Resources\DeveloperAvatars\wuqi.png" />
-	  <None Remove="Resources\Icons-png\check-box-background.png" />
-	  <None Remove="Resources\Icons-png\penUpright.png" />
+	  <None Remove="Resources\Icons-png\AdmoxBooth.png" />
+	  <None Remove="Resources\Icons-png\AdmoxWhiteboard.png" />
+	  <None Remove="Resources\Icons-png\Donview.png" />
+	  <None Remove="Resources\Icons-png\EasiNote.png" />
+	  <None Remove="Resources\Icons-png\EasiNote3C.png" />
+	  <None Remove="Resources\Icons-png\EasiNote5C.png" />
+	  <None Remove="Resources\Icons-png\E_Board.png" />
+	  <None Remove="Resources\Icons-png\HiteBoard.png" />
+	  <None Remove="Resources\Icons-png\HiteCamera.png" />
+	  <None Remove="Resources\Icons-png\MaxHubWhiteboard.png" />
+	  <None Remove="Resources\Icons-png\Powerpoint.png" />
+	  <None Remove="Resources\Icons-png\PPTTools.png" />
+	  <None Remove="Resources\Icons-png\Seewo2Annotation.png" />
+	  <None Remove="Resources\Icons-png\SeewoPinco.png" />
+	  <None Remove="Resources\Icons-png\SmartClassPad_V4.png" />
 	  <None Remove="Resources\Icons-png\uac_icon.png" />
+	  <None Remove="Resources\Icons-png\WenXiang.png" />
+	  <None Remove="Resources\Icons-png\Whiteboard.png" />
+	  <None Remove="Resources\Icons-png\WPS.png" />
+	  <None Remove="Resources\Icons-png\YiYunVisualPresenter.png" />
+	  <None Remove="Resources\Icons-png\YiYunWhiteboard.png" />
+	  <None Remove="Resources\Icons-png\YJCamera.png" />
 	  <None Remove="Resources\qrcodes.png" />
 	</ItemGroup>
 	<ItemGroup>
@@ -151,9 +170,29 @@
 		<Resource Include="Resources\DeveloperAvatars\STBBRD.png" />
 		<Resource Include="Resources\DeveloperAvatars\wuqi.png" />
 		<Resource Include="Resources\DeveloperAvatars\WXRIW.png" />
+		<Resource Include="Resources\Icons-png\AdmoxWhiteboard.png" />
 		<Resource Include="Resources\Icons-png\check-box-background.png" />
+		<Resource Include="Resources\Icons-png\Donview.png" />
+		<Resource Include="Resources\Icons-png\EasiNote.png" />
+		<Resource Include="Resources\Icons-png\EasiNote3C.png" />
+		<Resource Include="Resources\Icons-png\EasiNote5C.png" />
+		<Resource Include="Resources\Icons-png\E_Board.png" />
+		<Resource Include="Resources\Icons-png\HiteBoard.png" />
+		<Resource Include="Resources\Icons-png\HiteCamera.png" />
+		<Resource Include="Resources\Icons-png\MaxHubWhiteboard.png" />
 		<Resource Include="Resources\Icons-png\penUpright.png" />
+		<Resource Include="Resources\Icons-png\Powerpoint.png" />
+		<Resource Include="Resources\Icons-png\PPTTools.png" />
+		<Resource Include="Resources\Icons-png\Seewo2Annotation.png" />
+		<Resource Include="Resources\Icons-png\SeewoPinco.png" />
+		<Resource Include="Resources\Icons-png\SmartClassPad_V4.png" />
 		<Resource Include="Resources\Icons-png\uac_icon.png" />
+		<Resource Include="Resources\Icons-png\WenXiang.png" />
+		<Resource Include="Resources\Icons-png\Whiteboard.png" />
+		<Resource Include="Resources\Icons-png\WPS.png" />
+		<Resource Include="Resources\Icons-png\YiYunVisualPresenter.png" />
+		<Resource Include="Resources\Icons-png\YiYunWhiteboard.png" />
+		<Resource Include="Resources\Icons-png\YJCamera.png" />
 		
 		<Resource Include="Resources\qrcodes.png" />
 		<Resource Include="Resources\Segoe Fluent Icons.ttf" />
@@ -168,6 +207,9 @@
 			<ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
 			<Install>true</Install>
 		</BootstrapperPackage>
+	</ItemGroup>
+	<ItemGroup>
+	  <Resource Include="Resources\Icons-png\AdmoxBooth.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Compile Update="Properties\Settings.Designer.cs">
